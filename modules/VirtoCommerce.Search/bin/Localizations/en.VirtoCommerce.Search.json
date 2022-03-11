@@ -1,0 +1,84 @@
+{
+  "search": {
+    "commands": {
+      "apply-filter": "Save & apply",
+      "rebuild-index": "Build Index",
+      "copy-to-clipboard": "Copy to Clipboard",
+      "swap-index": "Swap indices",
+      "show-backup-indices": "Show backup indices",
+      "hide-backup-indices": "Hide backup indices"
+    },
+    "main-menu-title": {
+      "search-index": "Search index"
+    },
+    "blades": {
+      "index-progress": {
+        "labels": {
+          "start": "Start",
+          "end": "End",
+          "errors": "Errors",
+          "stats": "Indexed - {{ processedCount }} of {{ totalCount }} documents"
+        }
+      },
+      "index-detail": {
+        "title": "Search index",
+        "title-new": "Search index missing",
+        "subtitle": "Search index details",
+        "labels": {
+          "no-index": "Index not found",
+          "build-date": "Last indexed",
+          "content": "Index content"
+        }
+      },
+      "document-type-list": {
+        "title": "Document types",
+        "labels": {
+          "document-type": "Document type",
+          "indexed-docs-total": "Docs count",
+          "provider": "Provider",
+          "scope": "Scope",
+          "last-indexation-date": "Last indexed",
+          "build-index": "Build index",
+          "rebuild-index": "Rebuild index",
+          "swap-index": "Swap indices",
+          "active": "Active index"
+        }
+      }
+    },
+    "dialogs": {
+      "reindex": {
+        "title": "Build Search Index",
+        "msg1": "Choose how to update the Search Index. Options:",
+        "msg2": "Build: index for all data without recreating.",
+        "msg3": "Delete + build: Current search index will be deleted and built from scratch. Note that there WON'T BE ANY SEARCH RESULTS until the build process finishes.",
+        "index": "Build",
+        "reindex": "Delete + build"
+      }
+    },
+    "widgets": {
+      "index": {
+        "index-ok": "Indexed <span am-time-ago='indexDate'></span>",
+        "index-old": "Outdated. Index was built <span am-time-ago='indexDate'>",
+        "no-index": "Search index missing"
+      }
+    }
+  },
+  "permissions": {
+    "search:index:rebuild": "Allows to delete search index and build it again.",
+    "search:index:access": "Allows access to the Search Index menu."
+  },
+  "settings": {
+    "VirtoCommerce.Search.IndexingJobs.Enable": {
+      "title": "Schedule indexing jobs",
+      "description": "Enable or disable periodic search index builders"
+    },
+    "VirtoCommerce.Search.IndexingJobs.CronExpression": {
+      "title": "Indexing jobs cron expression",
+      "description": "x minutes use '0/x * * * *', x hours use '0 */x * * *' you can set minutes also '15 */x * * *', x days '0 0 */x * *'"
+    },
+    "VirtoCommerce.Search.IndexPartitionSize": {
+      "title": "The maximum items count per indexing partition",
+      "description": "High value may will cause slow performance"
+    }
+  }
+}

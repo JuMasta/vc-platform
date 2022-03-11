@@ -1,0 +1,49 @@
+<div class="blade-static __bottom" ng-include="'$(Platform)/Scripts/common/templates/create.tpl.html'" ng-if="blade.isNew"></div>
+<div class="blade-content">
+    <div class="blade-inner">
+        <div class="inner-block clearfix" ng-controller="virtoCommerce.customerModule.organizationDetailController">
+            <form class="form" name="detailForm">
+                <va-metaform registered-inputs="blade.metaFields0" blade="blade" column-count="2"></va-metaform>
+
+                <div class="form-group" ng-init="setForm(detailForm)">
+                    <va-widget-container group="organizationDetail1" blade="blade" gridster-opts="{columns: 3}"></va-widget-container>
+                </div>
+
+                <va-metaform registered-inputs="blade.metaFields" blade="blade"></va-metaform>
+
+                <div class="form-group">
+                    <va-widget-container group="organizationDetail2" blade="blade" data="blade.currentEntity" gridster-opts="{columns: 3}"></va-widget-container>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script type="text/ng-template" id="groups.html">
+    <div class="form-group">
+        <label class="form-label">{{'customer.blades.contact-detail.labels.groups' | translate}}  <a href="" ng-click="blade.openGroupsDictionarySettingManagement()" class="form-edit" va-permission="platform:setting:update"><i class="form-ico fa fa-pencil"></i></a></label>
+        <div class="form-input" data-role="input-control">
+            <ui-select multiple ng-model="blade.currentEntity.groups">
+                <ui-select-match placeholder="{{'customer.blades.contact-detail.placeholders.groups' | translate}}">{{$item}}</ui-select-match>
+                <ui-select-choices repeat="x in blade.groups | filter: $select.search">
+                    <span ng-bind-html="x | highlight: $select.search"></span>
+                </ui-select-choices>
+            </ui-select>
+        </div>
+    </div>
+</script>
+<script type="text/ng-template" id="status.html">
+    <div class="form-group">
+        <label class="form-label">
+            {{ 'customer.blades.shared.labels.status' | translate }}
+            <a href="" ng-click="blade.openStatusSettingManagement('Customer.OrganizationStatuses')" class="form-edit" va-permission="platform:setting:update"><i class="form-ico fa fa-pencil"></i></a>
+        </label>
+        <div class="form-input">
+            <ui-select ng-model="blade.currentEntity.status" ng-init="blade.loadStatuses('Customer.OrganizationStatuses')">
+                <ui-select-match placeholder="{{ 'customer.blades.shared.placeholders.status' | translate }}">{{ blade.currentEntity.status }}</ui-select-match>
+                <ui-select-choices repeat="x in blade.statuses | filter: $select.search">
+                    <span ng-bind-html="x | highlight: $select.search"></span>
+                </ui-select-choices>
+            </ui-select>
+        </div>
+    </div>
+</script>

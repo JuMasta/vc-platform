@@ -1,0 +1,58 @@
+<div class="blade-static">
+    <div class="form-group">
+        <p class="form-count">{{'platform.list.count' | translate}}: <span class="count">{{blade.currentEntity.items.length | number:0}}</span></p>
+    </div>
+</div>
+<div class="blade-content __large-wide">
+    <div class="blade-inner">
+        <div class="inner-block">
+            <form name="orderForm" novalidate></form>
+            <div class="table-wrapper">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th class="table-col __product-control">
+                                <label class="form-control __checkbox">
+                                    <input type="checkbox" ng-model="blade.selectedAll" ng-change="checkAll(blade.selectedAll)" />
+                                    <span class="check"></span>
+                                </label>
+                            </th>
+                            <th class="table-col __proudct-img">{{ 'orders.blades.shipment-items.labels.item' | translate }}</th>
+                            <th class="table-col"></th>
+                            <th class="table-col">{{ 'orders.blades.shipment-items.labels.quantity' | translate }}</th>
+                            <th class="table-col">{{ 'orders.blades.shipment-items.labels.price' | translate }}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="table-item" ng-repeat="data in blade.currentEntity.items" ng-class="{'__selected': data.id === selectedNodeId}" context-menu data-target="col_menu_{{data.id}}" ng-click='selectItem(data)'>
+                            <td class="table-col">
+                                <label class="form-control __checkbox">
+                                    <input type="checkbox" ng-model="data.selected">
+                                    <span class="check"></span>
+                                </label>
+                            </td>
+                            <td class="table-col">
+                                <div class="product-img">
+                                    <div class="image" style="background-image: url({{data.lineItem.imageUrl}})" ng-if="data.lineItem.imageUrl" ng-click="openItemDetail(data)"></div>
+                                    <i class="table-ico fas fa-image" ng-if="!data.lineItem.imageUrl" />
+                                </div>
+                                
+                            </td>
+                            <td class="table-col">{{data.lineItem.name}}</td>
+                            <td class="table-col">
+                                <div class="__mini __number">
+                                    {{data.quantity | number:0}}
+                                </div>
+                            </td>
+                            <td class="table-col">
+                                <div class="form-input __mini">
+                                    {{data.lineItem.price | currency:data.lineItem.currency | showPrice:blade.isVisiblePrices}}
+                                </div>
+                            </td>
+                        </tr>                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

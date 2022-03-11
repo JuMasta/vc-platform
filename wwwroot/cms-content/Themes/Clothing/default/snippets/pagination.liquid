@@ -1,0 +1,32 @@
+{% if paginator.pages > 1 %}
+<div class="pagination clearfix">
+  <ul class="list-inline pagination-num">
+    {% if paginator.previous %}
+    <li class="prev"><a href="{{ paginator.previous.url }}"><i class="fa fa-angle-left"></i></a></li>
+    {% else %}
+    <li class="prev hide"><i class="fa fa-angle-left"></i></li>
+    {% endif %}
+    
+    {% for part in paginator.parts %}
+    {% if part.is_link %}
+    <li><a href="{{ part.url }}">{{ part.title }}</a></li>
+    {% else %}
+    {% if part.title == '&hellip;' %}
+    <li class="ellipsis">{{ part.title }}</li>
+    {% else %}
+    <li class="active">{{ part.title }}</li>
+    {% endif %}
+    {% endif %}
+    {% endfor %}     
+    
+    {% if paginator.next %}
+    <li class="next"><a href="{{ paginator.next.url }}"><i class="fa fa-angle-right"></i></a></li>
+    {% else %}
+    <li class="next hide"><i class="fa fa-angle-right"></i></li>
+    {% endif %}
+  </ul>
+  <p class="pagination-num-showing">
+    {{'general.pagination.showing' | t}}: {{ paginator.current_offset | plus: 1 }}-{% if paginator.next %}{{ paginator.current_offset | plus: paginator.page_size }}{% else %}{{ paginator.items }}{% endif %} {{'general.pagination.of' | t}} {{ paginator.items }}
+  </p>
+</div>
+{% endif %}

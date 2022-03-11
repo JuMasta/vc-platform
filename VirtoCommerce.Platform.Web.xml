@@ -1,0 +1,677 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>VirtoCommerce.Platform.Web</name>
+    </assembly>
+    <members>
+        <member name="P:VirtoCommerce.Platform.Web.Azure.AzureAdOptions.Enabled">
+            <summary>
+            Determines whether the user authentication via Azure Active Directory is enabled.
+            </summary>
+        </member>
+        <member name="P:VirtoCommerce.Platform.Web.Azure.AzureAdOptions.AuthenticationType">
+            <summary>
+            Sets AuthenticationType value for Azure AD authentication provider.
+            </summary>
+        </member>
+        <member name="P:VirtoCommerce.Platform.Web.Azure.AzureAdOptions.AuthenticationCaption">
+            <summary>
+            Sets human-readable caption for Azure AD authentication provider. It is visible on sign-in page.
+            </summary>
+        </member>
+        <member name="P:VirtoCommerce.Platform.Web.Azure.AzureAdOptions.ApplicationId">
+            <summary>
+            Application ID of the VirtoCommerce platform application registered in Azure Active Directory. It can be found 
+            in the Azure control panel: Azure Active Directory > App registrations > (platform app) > Application ID
+            (e.g. 01234567-89ab-cdef-0123-456789abcdef).
+            </summary>
+        </member>
+        <member name="P:VirtoCommerce.Platform.Web.Azure.AzureAdOptions.TenantId">
+            <summary>
+            ID of the Azure AD domain that will be used for authentication. It can be found in the Azure control panel:
+            Azure Active Directory > Properties > Directory ID (e.g. abcdef01-2345-6789-abcd-ef0123456789).
+            </summary>
+        </member>
+        <member name="P:VirtoCommerce.Platform.Web.Azure.AzureAdOptions.AzureAdInstance">
+            <summary>
+            URL of the Azure AD endpoint used for authentication (usually https://login.microsoftonline.com/).
+            </summary>
+        </member>
+        <member name="P:VirtoCommerce.Platform.Web.Azure.AzureAdOptions.DefaultUserType">
+            <summary>
+            Default user type for users created by Azure AD accounts.
+            </summary>
+        </member>
+        <member name="P:VirtoCommerce.Platform.Web.Azure.AzureAdOptions.UsePreferredUsername">
+            <summary>
+            Check preferred_username claim as a fallback scenario in case when UPN claim is not set
+            </summary>
+        </member>
+        <member name="P:VirtoCommerce.Platform.Web.Azure.AzureAdOptions.Priority">
+            <summary>
+            Login type priority
+            </summary>
+        </member>
+        <member name="M:VirtoCommerce.Platform.Web.Controllers.Api.ChangeLogController.ForceChanges(VirtoCommerce.Platform.Web.Model.ForceChangesRequest)">
+            <summary>
+            Force set changes last modified date
+            </summary>
+            <param name="forceRequest">Force changes request</param>
+            <returns></returns>
+        </member>
+        <member name="M:VirtoCommerce.Platform.Web.Controllers.Api.ChangeLogController.GetLastModifiedDate(System.String)">
+            <summary>
+            Get last modified date for given scope
+            Used for signal of what something changed and for cache invalidation in external platform clients
+            </summary>
+            <param name="scope"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VirtoCommerce.Platform.Web.Controllers.Api.CommonController.GetLoginPageUIOptions">
+            <summary>
+            Get predefined login page background opitons
+            </summary>
+        </member>
+        <member name="M:VirtoCommerce.Platform.Web.Controllers.Api.DiagnosticsController.GetModulesErrors">
+            <summary>
+            Get installed modules with errors
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VirtoCommerce.Platform.Web.Controllers.Api.DynamicPropertiesController.GetObjectTypes">
+            <summary>
+            Get object types which support dynamic properties
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VirtoCommerce.Platform.Web.Controllers.Api.DynamicPropertiesController.SearchDynamicProperties(VirtoCommerce.Platform.Core.DynamicProperties.DynamicPropertySearchCriteria)">
+            <summary>
+            Get dynamic properties registered for object type
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VirtoCommerce.Platform.Web.Controllers.Api.DynamicPropertiesController.CreatePropertyAsync(VirtoCommerce.Platform.Core.DynamicProperties.DynamicProperty)">
+            <summary>
+            Add new dynamic property
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VirtoCommerce.Platform.Web.Controllers.Api.DynamicPropertiesController.ExposeDynamicObjectProperty">
+            <summary>
+            Does nothing. Just a way to expose DynamicObjectProperty thru Swagger.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VirtoCommerce.Platform.Web.Controllers.Api.DynamicPropertiesController.UpdatePropertyAsync(VirtoCommerce.Platform.Core.DynamicProperties.DynamicProperty)">
+            <summary>
+            Update existing dynamic property
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VirtoCommerce.Platform.Web.Controllers.Api.DynamicPropertiesController.DeletePropertyAsync(System.String[])">
+            <summary>
+            Delete dynamic property
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VirtoCommerce.Platform.Web.Controllers.Api.DynamicPropertiesController.SearchDictionaryItems(VirtoCommerce.Platform.Core.DynamicProperties.DynamicPropertyDictionaryItemSearchCriteria)">
+            <summary>
+            Get dictionary items
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VirtoCommerce.Platform.Web.Controllers.Api.DynamicPropertiesController.SaveDictionaryItemsAsync(VirtoCommerce.Platform.Core.DynamicProperties.DynamicPropertyDictionaryItem[])">
+            <summary>
+            Add or update dictionary items
+            </summary>
+            <remarks>
+            Fill item ID to update existing item or leave it empty to create a new item.
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:VirtoCommerce.Platform.Web.Controllers.Api.DynamicPropertiesController.DeleteDictionaryItemAsync(System.String[])">
+            <summary>
+            Delete dictionary items
+            </summary>
+            <param name="ids">IDs of dictionary items to delete.</param>
+            <returns></returns>
+        </member>
+        <member name="M:VirtoCommerce.Platform.Web.Controllers.Api.JobsController.GetStatus(System.String)">
+            <summary>
+            Get background job status
+            </summary>
+            <param name="id">Job ID.</param>
+            <returns></returns>
+        </member>
+        <member name="M:VirtoCommerce.Platform.Web.Controllers.Api.LocalizationController.GetLocalization(System.String)">
+            <summary>
+            Return localization resource
+            </summary>
+            <param name="lang">Language of localization resource (en by default)</param>
+            <returns></returns>
+        </member>
+        <member name="M:VirtoCommerce.Platform.Web.Controllers.Api.LocalizationController.GetLocales">
+            <summary>
+            Return all available locales
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VirtoCommerce.Platform.Web.Controllers.Api.LocalizationController.GetRegionalFormats">
+            <summary>
+            Return all available regional formats
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VirtoCommerce.Platform.Web.Controllers.Api.ModulesController.ReloadModules">
+            <summary>
+            Reload  modules
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VirtoCommerce.Platform.Web.Controllers.Api.ModulesController.GetModules">
+            <summary>
+            Get installed modules
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VirtoCommerce.Platform.Web.Controllers.Api.ModulesController.GetDependingModules(VirtoCommerce.Platform.Web.Modularity.ModuleDescriptor[])">
+            <summary>
+            Get all dependent modules for module
+            </summary>
+            <param name="moduleDescriptors">modules descriptors</param>
+            <returns></returns>
+        </member>
+        <member name="M:VirtoCommerce.Platform.Web.Controllers.Api.ModulesController.GetMissingDependencies(VirtoCommerce.Platform.Web.Modularity.ModuleDescriptor[])">
+            <summary>
+            Returns a flat expanded  list of modules that depend on passed modules
+            </summary>
+            <param name="moduleDescriptors">modules descriptors</param>
+            <returns></returns>
+        </member>
+        <member name="M:VirtoCommerce.Platform.Web.Controllers.Api.ModulesController.UploadModuleArchive">
+            <summary>
+            Upload module package for installation or update
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VirtoCommerce.Platform.Web.Controllers.Api.ModulesController.InstallModules(VirtoCommerce.Platform.Web.Modularity.ModuleDescriptor[])">
+            <summary>
+            Install modules 
+            </summary>
+            <param name="modules">modules for install</param>
+            <returns></returns>
+        </member>
+        <member name="M:VirtoCommerce.Platform.Web.Controllers.Api.ModulesController.UninstallModule(VirtoCommerce.Platform.Web.Modularity.ModuleDescriptor[])">
+            <summary>
+            Uninstall module
+            </summary>
+            <param name="modules">modules</param>
+            <returns></returns>
+        </member>
+        <member name="M:VirtoCommerce.Platform.Web.Controllers.Api.ModulesController.Restart">
+            <summary>
+            Restart web application
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VirtoCommerce.Platform.Web.Controllers.Api.ModulesController.TryToAutoInstallModules">
+            <summary>
+            Auto-install modules with specified groups
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VirtoCommerce.Platform.Web.Controllers.Api.ModulesController.GetAutoInstallState">
+            <summary>
+            This method used by azure automatically deployment scripts to check the installation status
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VirtoCommerce.Platform.Web.Controllers.Api.PlatformExportImportController.GetSampleDataState">
+            <summary>
+            This method used for azure automatically deployment
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VirtoCommerce.Platform.Web.Controllers.Api.ProfilesController.GetCurrentUserProfileAsync">
+            <summary>
+            Get current user profile
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VirtoCommerce.Platform.Web.Controllers.Api.ProfilesController.UpdateCurrentUserProfileAsync(VirtoCommerce.Platform.Web.Model.Profiles.UserProfile)">
+            <summary>
+            Update current user profile
+            </summary>
+            <param name="userProfile"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VirtoCommerce.Platform.Web.Controllers.Api.PushNotificationController.SearchPushNotification(VirtoCommerce.Platform.Core.PushNotifications.PushNotificationSearchCriteria)">
+            <summary>
+            SearchAsync push notifications
+            </summary>
+            <param name="criteria">SearchAsync parameters.</param>
+            <returns></returns>
+        </member>
+        <member name="M:VirtoCommerce.Platform.Web.Controllers.Api.PushNotificationController.MarkAllAsRead">
+            <summary>
+            Mark all notifications as read
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VirtoCommerce.Platform.Web.Controllers.Api.SecurityController.Login(VirtoCommerce.Platform.Web.Model.Security.LoginRequest)">
+            <summary>
+            Sign in with user name and password
+            </summary>
+            <remarks>
+            Verifies provided credentials and if succeeded returns full user details, otherwise returns 401 Unauthorized.
+            </remarks>
+            <param name="request">Login request.</param>
+        </member>
+        <member name="M:VirtoCommerce.Platform.Web.Controllers.Api.SecurityController.Logout">
+            <summary>
+            Sign out
+            </summary>
+        </member>
+        <member name="M:VirtoCommerce.Platform.Web.Controllers.Api.SecurityController.GetCurrentUser">
+            <summary>
+            Get current user details
+            </summary>
+        </member>
+        <member name="M:VirtoCommerce.Platform.Web.Controllers.Api.SecurityController.GetAllRegisteredPermissions">
+            <summary>
+            Get all registered permissions
+            </summary>
+        </member>
+        <member name="M:VirtoCommerce.Platform.Web.Controllers.Api.SecurityController.SearchRoles(VirtoCommerce.Platform.Core.Security.RoleSearchCriteria)">
+            <summary>
+            SearchAsync roles by keyword
+            </summary>
+            <param name="request">SearchAsync parameters.</param>
+        </member>
+        <member name="M:VirtoCommerce.Platform.Web.Controllers.Api.SecurityController.GetRole(System.String)">
+            <summary>
+            Get role by ID
+            </summary>
+            <param name="roleName"></param>
+        </member>
+        <member name="M:VirtoCommerce.Platform.Web.Controllers.Api.SecurityController.DeleteRoles(System.String[])">
+            <summary>
+            Delete roles by ID
+            </summary>
+            <param name="roleIds">An array of role IDs.</param>
+        </member>
+        <member name="M:VirtoCommerce.Platform.Web.Controllers.Api.SecurityController.UpdateRole(VirtoCommerce.Platform.Core.Security.Role)">
+            <summary>
+            Update an existing role or create new
+            </summary>
+            <param name="role"></param>
+        </member>
+        <member name="M:VirtoCommerce.Platform.Web.Controllers.Api.SecurityController.SearchUsers(VirtoCommerce.Platform.Core.Security.UserSearchCriteria)">
+            <summary>
+            SearchAsync users by keyword
+            </summary>
+            <param name="criteria">Search criteria.</param>
+        </member>
+        <member name="M:VirtoCommerce.Platform.Web.Controllers.Api.SecurityController.SearchUsersOld(VirtoCommerce.Platform.Core.Security.UserSearchCriteria)">
+            <summary>
+            Old SearchAsync users by keyword
+            </summary>
+            <param name="criteria">Search criteria.</param>
+            <remarks>Obsolete, only for backward compatibility with V2</remarks>
+        </member>
+        <member name="M:VirtoCommerce.Platform.Web.Controllers.Api.SecurityController.GetUserByName(System.String)">
+            <summary>
+            Get user details by user name
+            </summary>
+            <param name="userName"></param>
+        </member>
+        <member name="M:VirtoCommerce.Platform.Web.Controllers.Api.SecurityController.GetUserById(System.String)">
+            <summary>
+            Get user details by user ID
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:VirtoCommerce.Platform.Web.Controllers.Api.SecurityController.GetUserByEmail(System.String)">
+            <summary>
+            Get user details by user email
+            </summary>
+            <param name="email"></param>
+        </member>
+        <member name="M:VirtoCommerce.Platform.Web.Controllers.Api.SecurityController.GetUserByLogin(System.String,System.String)">
+            <summary>
+            Get user details by external login provider
+            </summary>
+        </member>
+        <member name="M:VirtoCommerce.Platform.Web.Controllers.Api.SecurityController.Create(VirtoCommerce.Platform.Core.Security.ApplicationUser)">
+            <summary>
+            Create new user
+            </summary>
+        </member>
+        <member name="M:VirtoCommerce.Platform.Web.Controllers.Api.SecurityController.ChangeCurrentUserPassword(VirtoCommerce.Platform.Web.Model.Security.ChangePasswordRequest)">
+            <summary>
+            Change password for current user.
+            </summary>
+            <param name="changePassword">Old and new passwords.</param>
+            <returns>Result of password change</returns>
+        </member>
+        <member name="M:VirtoCommerce.Platform.Web.Controllers.Api.SecurityController.ChangePassword(System.String,VirtoCommerce.Platform.Web.Model.Security.ChangePasswordRequest)">
+            <summary>
+            Change password
+            </summary>
+            <param name="userName">user name</param>
+            <param name="changePassword">Old and new passwords.</param>
+        </member>
+        <member name="M:VirtoCommerce.Platform.Web.Controllers.Api.SecurityController.ResetPassword(System.String,VirtoCommerce.Platform.Web.Model.Security.ResetPasswordConfirmRequest)">
+            <summary>
+            Reset password confirmation
+            </summary>
+            <param name="userName"></param>
+            <param name="resetPasswordConfirm">Password reset information containing new password.</param>
+            <returns>Result of password reset.</returns>
+        </member>
+        <member name="M:VirtoCommerce.Platform.Web.Controllers.Api.SecurityController.ResetPasswordByToken(System.String,VirtoCommerce.Platform.Web.Model.Security.ResetPasswordConfirmRequest)">
+            <summary>
+            Reset password confirmation
+            </summary>
+            <param name="userId"></param>
+            <param name="resetPasswordConfirm">New password.</param>
+        </member>
+        <member name="M:VirtoCommerce.Platform.Web.Controllers.Api.SecurityController.ValidatePasswordResetToken(System.String,VirtoCommerce.Platform.Web.Model.Security.ValidatePasswordResetTokenRequest)">
+            <summary>
+            Validate password reset token
+            </summary>
+        </member>
+        <member name="M:VirtoCommerce.Platform.Web.Controllers.Api.SecurityController.RequestPasswordReset(System.String)">
+            <summary>
+            Send email with instructions on how to reset user password.
+            </summary>
+            <remarks>
+            Verifies provided userName and (if succeeded) sends email.
+            </remarks>
+        </member>
+        <member name="M:VirtoCommerce.Platform.Web.Controllers.Api.SecurityController.Update(VirtoCommerce.Platform.Core.Security.ApplicationUser)">
+            <summary>
+            Update user details by user ID
+            </summary>
+            <param name="user">User details.</param>
+        </member>
+        <member name="M:VirtoCommerce.Platform.Web.Controllers.Api.SecurityController.Delete(System.String[])">
+            <summary>
+            Delete users by name
+            </summary>
+            <param name="names">An array of user names.</param>
+        </member>
+        <member name="M:VirtoCommerce.Platform.Web.Controllers.Api.SecurityController.IsUserLocked(System.String)">
+            <summary>
+            Checks if user locked
+            </summary>
+            <param name="id">User id</param>
+            <returns></returns>
+        </member>
+        <member name="M:VirtoCommerce.Platform.Web.Controllers.Api.SecurityController.LockUser(System.String)">
+            <summary>
+            Lock user
+            </summary>
+            <param name="id">>User id</param>
+            <returns></returns>
+        </member>
+        <member name="M:VirtoCommerce.Platform.Web.Controllers.Api.SecurityController.UnlockUser(System.String)">
+            <summary>
+            Unlock user
+            </summary>
+            <param name="id">>User id</param>
+            <returns></returns>
+        </member>
+        <member name="M:VirtoCommerce.Platform.Web.Controllers.Api.SecurityController.GetLoginTypes">
+            <summary>
+            Get allowed login types
+            </summary>
+        </member>
+        <member name="M:VirtoCommerce.Platform.Web.Controllers.Api.SecurityController.SendVerificationEmail(System.String)">
+            <summary>
+            Verify user email
+            </summary>
+            <param name="userId"></param>
+        </member>
+        <member name="M:VirtoCommerce.Platform.Web.Controllers.Api.SettingController.GetAllGlobalSettings">
+            <summary>
+            Get all settings
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VirtoCommerce.Platform.Web.Controllers.Api.SettingController.GetGlobalModuleSettingsAsync(System.String)">
+            <summary>
+            Get settings registered by specific module
+            </summary>
+            <param name="id">Module ID.</param>
+            <returns></returns>
+        </member>
+        <member name="M:VirtoCommerce.Platform.Web.Controllers.Api.SettingController.GetGlobalSettingAsync(System.String)">
+            <summary>
+            Get setting details by name
+            </summary>
+            <param name="name">Setting system name.</param>
+            <returns></returns>
+        </member>
+        <member name="M:VirtoCommerce.Platform.Web.Controllers.Api.SettingController.UpdateAsync(VirtoCommerce.Platform.Core.Settings.ObjectSettingEntry[])">
+            <summary>
+            Update settings values
+            </summary>
+            <param name="objectSettings"></param>
+        </member>
+        <member name="M:VirtoCommerce.Platform.Web.Controllers.Api.SettingController.GetArrayAsync(System.String)">
+            <summary>
+            Get array setting values by name
+            </summary>
+            <param name="name">Setting system name.</param>
+            <returns></returns>
+        </member>
+        <member name="M:VirtoCommerce.Platform.Web.Controllers.Api.SettingController.GetUICustomizationSetting">
+            <summary>
+            Get UI customization setting
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VirtoCommerce.Platform.Web.Controllers.ExternalSignInController.GetUserName(Microsoft.AspNetCore.Identity.ExternalLoginInfo)">
+            <summary>
+            Try to take a user name from claims.
+            </summary>
+        </member>
+        <member name="M:VirtoCommerce.Platform.Web.Extensions.ApplicationBuilderExtensions.ExecuteSynchronized(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.Action)">
+            <summary>
+            Run specified payload in sync between several instances
+            </summary>
+            <param name="app"></param>
+            <param name="payload"></param>
+            <returns></returns>
+        </member>
+        <member name="T:VirtoCommerce.Platform.Web.Infrastructure.CustomAuthenticationSchemeProvider">
+            <summary>
+            https://github.com/openiddict/openiddict-core/issues/594
+            This custom provider allows able to use just [Authorize] instead of having to define [Authorize(AuthenticationSchemes = "Bearer")] above every API controller
+            without this Bearer authorization will not work
+            </summary>
+        </member>
+        <member name="M:VirtoCommerce.Platform.Web.Migrations.ApplicationBuilderExtensions.UsePlatformMigrations(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            Apply platform migrations
+            </summary>
+            <param name="appBuilder"></param>
+            <returns></returns>
+        </member>
+        <member name="P:VirtoCommerce.Platform.Web.Model.Home.IndexModel.RefreshProbingFolder">
+            <summary>
+            This allows knowing at the client if this option enabled or not at the backend.
+            If the option set to false, then the module install feature should be disabled at the client.
+            True by default.
+            </summary>
+        </member>
+        <member name="P:VirtoCommerce.Platform.Web.Model.Security.PasswordLoginOptions.Enabled">
+            <summary>
+            Determines whether the user authentication by username/password is enabled.
+            Always enabled unless explicitly disabled by the platform options.
+            </summary>
+        </member>
+        <member name="T:VirtoCommerce.Platform.Web.PushNotifications.Scalability.PushNotificationSynchronizerTask">
+            <summary>
+            This background task connects to the signalR hub (push notifications) to be able receive the notifications from other platform instances and actualize them
+            into the local notifications storage   
+            </summary>
+        </member>
+        <member name="M:VirtoCommerce.Platform.Web.Security.ApplicationBuilderExtensions.UsePruneExpiredTokensJob(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            Schedule a periodic job for prune expired/invalid authorization tokens
+            </summary>
+            <param name="appBuilder"></param>
+            <returns></returns>
+        </member>
+        <member name="T:VirtoCommerce.Platform.Web.Security.Authentication.ApiKeyAuthenticationHandler">
+            <summary>
+            Handle the Api Key scheme authentication.
+            </summary>
+        </member>
+        <member name="M:VirtoCommerce.Platform.Web.Security.Authentication.ApiKeyAuthenticationHandler.HandleAuthenticateAsync">
+            This method gets called for every request that requires authentication.
+        </member>
+        <member name="T:VirtoCommerce.Platform.Web.Security.Authorization.PermissionAuthorizationPolicyProvider">
+            <summary>
+            https://www.jerriepelser.com/blog/creating-dynamic-authorization-policies-aspnet-core/
+            </summary>
+        </member>
+        <member name="T:VirtoCommerce.Platform.Web.Security.BackgroundJobs.PruneExpiredTokensJob">
+            <summary>
+            Periodic job for prune expired/invalid authorization tokens
+            </summary>
+        </member>
+        <member name="M:VirtoCommerce.Platform.Web.Security.CustomUserManager.LoadUserDetailsAsync(VirtoCommerce.Platform.Core.Security.ApplicationUser)">
+            <summary>
+            Load detailed user information: Roles, external logins, claims (permissions)
+            </summary>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VirtoCommerce.Platform.Web.Security.CustomUserManager.LoadExistingUser(VirtoCommerce.Platform.Core.Security.ApplicationUser)">
+            <summary>
+            Finds existing user and loads its details
+            </summary>
+            <param name="user"></param>
+            <returns>Returns null, if no user found, otherwise user with details.</returns>
+        </member>
+        <member name="T:VirtoCommerce.Platform.Web.Swagger.ArrayInQueryParametersFilter">
+            <summary>
+            The workaround for openapi3/autorest query parameters serialization
+            See more: https://github.com/Azure/autorest/issues/3373, https://swagger.io/specification/
+            </summary>
+        </member>
+        <member name="T:VirtoCommerce.Platform.Web.Swagger.ConsumeFromBodyFilter">
+            <summary>
+            This temporary filter removes broken "application/*+json" content-type.
+            It seems it's some openapi/swagger bug, because Autorest fails.        
+            </summary>
+        </member>
+        <member name="T:VirtoCommerce.Platform.Web.Swagger.CustomSwaggerGenerator">
+            <summary>
+            Generate swagger schema ids for schema refs depending on document name
+            </summary>
+        </member>
+        <member name="T:VirtoCommerce.Platform.Web.Swagger.EnumSchemaFilter">
+            <summary>
+            Compatibility: publish enumeration values as strings instead of integers (default in openapi 3)
+            </summary>
+        </member>
+        <member name="T:VirtoCommerce.Platform.Web.Swagger.ExcludeRedundantDepsFilter">
+            <summary>
+            Sometimes SwaggerIgnore can't be used for models, because no place to write SwaggerIgnore (the used model is a dependency).
+            Here is a good place to exclude models from swagger document
+            </summary>
+        </member>
+        <member name="T:VirtoCommerce.Platform.Web.Swagger.OpenIDEndpointDescriptionFilter">
+            <summary>
+            This filter adds parameters description for "~/connect/token" endpoint
+            </summary>
+        </member>
+        <member name="T:VirtoCommerce.Platform.Web.Swagger.SwaggerIgnoreFilter">
+            <summary>
+            Allows to ignore <see cref="T:Newtonsoft.Json.JsonIgnoreAttribute"/> and <see cref="T:VirtoCommerce.Platform.Core.Common.SwaggerIgnoreAttribute"/>.
+            </summary>
+        </member>
+        <member name="M:VirtoCommerce.Platform.Web.Swagger.SwaggerServiceCollectionExtensions.AddSwagger(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Register swagger documents generator
+            </summary>
+            <param name="services"></param>
+            <param name="configuration"></param>
+        </member>
+        <member name="M:VirtoCommerce.Platform.Web.Swagger.SwaggerServiceCollectionExtensions.UseSwagger(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            Enable endpoints for swagger documents and UI
+            </summary>
+            <param name="applicationBuilder"></param>
+        </member>
+        <member name="M:VirtoCommerce.Platform.Web.Swagger.SwaggerServiceCollectionExtensions.GroupByModuleName(Microsoft.AspNetCore.Mvc.ApiExplorer.ApiDescription,Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            grouping by Module Names in the ApiDescription
+            with comparing Assemlies
+            </summary>
+            <param name="api"></param>
+            <param name="services"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VirtoCommerce.Platform.Web.Swagger.SwaggerServiceCollectionExtensions.AddModulesXmlComments(Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenOptions,Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Add Comments/Descriptions from XML-files in the ApiDescription
+            </summary>
+            <param name="options"></param>
+            <param name="services"></param>
+        </member>
+        <member name="T:VirtoCommerce.Platform.Web.TagHelpers.Internal.FileVersionHashProvider">
+            <summary>
+            Provides version hash for a specified file.
+            </summary>
+        </member>
+        <member name="M:VirtoCommerce.Platform.Web.Telemetry.ApplicationBuilderExtensions.UseAppInsightsTelemetry(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            Configure AppInsights sampling accordingly to
+            https://docs.microsoft.com/en-us/azure/azure-monitor/app/sampling#configure-sampling-settings
+            </summary>
+            <param name="app"></param>
+            <returns></returns>
+        </member>
+        <member name="T:VirtoCommerce.Platform.Web.Telemetry.IgnoreSignalRTelemetryProcessor">
+            <summary>
+            Application insight telemetry processor which exclude all SignalR requests from statistic.
+            </summary>
+        </member>
+        <member name="T:VirtoCommerce.Platform.Web.Telemetry.IgnoreSqlTelemetryProcessor">
+            <summary>
+            Application insight telemetry processor which exclude all dependency SQL queries related to Hangfire.
+            </summary>
+        </member>
+        <member name="P:VirtoCommerce.Platform.Web.Telemetry.IgnoreSqlTelemetryProcessor.Options">
+            <summary>
+            Just for looking at processor options from outside (logging, etc...)
+            </summary>
+        </member>
+        <member name="M:VirtoCommerce.Platform.Web.Telemetry.ServiceCollectionExtensions.AddAppInsightsTelemetry(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Charge AppInsights options and add the telemetry
+            </summary>
+            <param name="services"></param>
+            <param name="configuration"></param>
+            <returns></returns>
+        </member>
+        <member name="T:VirtoCommerce.Platform.Web.Telemetry.UserTelemetryInitializer">
+            <summary>
+            A telemetry initializer that will gather user identity context information.
+            </summary>
+        </member>
+        <member name="M:VirtoCommerce.Platform.Web.Telemetry.UserTelemetryInitializer.OnInitializeTelemetry(Microsoft.AspNetCore.Http.HttpContext,Microsoft.ApplicationInsights.DataContracts.RequestTelemetry,Microsoft.ApplicationInsights.Channel.ITelemetry)">
+            <summary>
+            Initializes user id and name for Azure Web App case
+            </summary>
+            <param name="platformContext">Platform context.</param>
+            <param name="requestTelemetry">Request telemetry.</param>
+            <param name="telemetry">Telemetry item.</param>
+        </member>
+    </members>
+</doc>

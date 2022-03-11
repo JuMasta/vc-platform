@@ -1,0 +1,250 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>VirtoCommerce.ExperienceApiModule.Core</name>
+    </assembly>
+    <members>
+        <member name="M:VirtoCommerce.ExperienceApiModule.Core.Extensions.CommandTypeBuilderExtensions.UseCommandType``1(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Gets command builder for an existing query or command
+            </summary>
+        </member>
+        <member name="M:VirtoCommerce.ExperienceApiModule.Core.Extensions.CommandTypeBuilderExtensions.OverrideQueryType``2(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Overrides an existing query in abstracts factory and returns a new builder
+            </summary>
+        </member>
+        <member name="M:VirtoCommerce.ExperienceApiModule.Core.Extensions.CommandTypeBuilderExtensions.OverrideArgumentType``2(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Overrides an existing  set of arguments in abstracts factory and returns a new builder
+            </summary>
+        </member>
+        <member name="M:VirtoCommerce.ExperienceApiModule.Core.Extensions.CommandTypeBuilderExtensions.OverrideCommandType``2(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Overrides an existing  query or command in abstracts factory and returns a new builder
+            </summary>
+        </member>
+        <member name="M:VirtoCommerce.ExperienceApiModule.Core.Extensions.CommandTypeBuilderExtensions.WithCommandHandler``1(VirtoCommerce.ExperienceApiModule.Core.Infrastructure.ICommandTypeBuilder)">
+            <summary>
+            Registers a new handler for a query or command
+            </summary>
+        </member>
+        <member name="M:VirtoCommerce.ExperienceApiModule.Core.Extensions.IHasLanguageExtensions.FirstBestMatchForLanguage``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.String},System.String)">
+            <summary>
+            Looking for first best-match language-specific value in the enumerable, based on specified language value selector function
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="hasLanguages">An enumerable with values to search</param>
+            <param name="langSelector">Selector function, returning the language of each enumerable item</param>
+            <param name="language">Language to search</param>
+            <returns>First matching item to the specified language</returns>
+        </member>
+        <member name="M:VirtoCommerce.ExperienceApiModule.Core.Extensions.IHasLanguageExtensions.FirstBestMatchForLanguage(System.Collections.Generic.IEnumerable{VirtoCommerce.Platform.Core.Domain.IHasLanguage},System.String)">
+            <summary>
+            Looking for first best-match language-specific value in the enumerable
+            </summary>
+            <param name="hasLanguages">An enumerable with values to search</param>
+            <param name="language">Language to search</param>
+            <returns>First matching item to the specified language</returns>
+        </member>
+        <member name="M:VirtoCommerce.ExperienceApiModule.Core.Extensions.ResolveFieldContextExtensions.GetValue``1(GraphQL.IResolveFieldContext,System.String,``0)">
+            <summary>
+            Get value from user context
+            </summary>
+            <typeparam name="T">Type of T</typeparam>
+            <param name="resolveContext">GraphQL UserContext</param>
+            <param name="key">Search key</param>
+            <param name="defaultValue">Default return if value not founded in UserContext</param>
+            <returns>Return value of type <typeparamref name="T"/> from UserContext or <paramref name="defaultValue"/></returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:VirtoCommerce.ExperienceApiModule.Core.Helpers.GraphTypeExtenstionHelper.GetActualType``1">
+            <summary>
+            Returns the actual (overridden) type for requested type
+            </summary>
+        </member>
+        <member name="M:VirtoCommerce.ExperienceApiModule.Core.Helpers.GraphTypeExtenstionHelper.GetActualComplexType``1">
+            <summary>
+            Returns the actual (overridden) type for requested type
+            For generic graph type definitions like NonNullGraphType ProdcutType
+            or NonNullGraphType ListGraphType ProdcutType
+            </summary>
+        </member>
+        <member name="T:VirtoCommerce.ExperienceApiModule.Core.Infrastructure.Authorization.AuthorizationError">
+            <summary>
+            Represents an auhorization error
+            </summary>
+        </member>
+        <member name="T:VirtoCommerce.ExperienceApiModule.Core.Infrastructure.CustomGraphQLBuilder">
+            <summary>
+            Custom implementation of GraphQLBuilder to call GraphQL.Server extentions methods
+            </summary>
+        </member>
+        <member name="T:VirtoCommerce.ExperienceApiModule.Core.Infrastructure.CustomGraphQLExecuter`1">
+            <summary>
+            Wrapper for the default GraphQL query executor with AppInsights logging
+            </summary>
+        </member>
+        <member name="T:VirtoCommerce.ExperienceApiModule.Core.Infrastructure.IgnorePlainGraphQLTelemetryProcessor">
+            <summary>
+            AppInsights telemetry processor that skips default Graphql queries
+            </summary>
+        </member>
+        <member name="T:VirtoCommerce.ExperienceApiModule.Core.Infrastructure.ISchemaTypeBuilder`1">
+            <summary>
+            GraphQL schema type  builder used for declaration of new type extension via fluent syntax and specific extension methods as 'this' argument.
+            </summary>
+        </member>
+        <member name="P:VirtoCommerce.ExperienceApiModule.Core.Models.ProductPrice.PricelistId">
+            <summary>
+            Price list id
+            </summary>
+        </member>
+        <member name="P:VirtoCommerce.ExperienceApiModule.Core.Models.ProductPrice.Currency">
+            <summary>
+            Currency
+            </summary>
+        </member>
+        <member name="P:VirtoCommerce.ExperienceApiModule.Core.Models.ProductPrice.ProductId">
+            <summary>
+            Product id
+            </summary>
+        </member>
+        <member name="P:VirtoCommerce.ExperienceApiModule.Core.Models.ProductPrice.DiscountPercent">
+            <summary>
+            Relative benefit. 30%
+            </summary>
+        </member>
+        <member name="P:VirtoCommerce.ExperienceApiModule.Core.Models.ProductPrice.ListPrice">
+            <summary>
+            Original product price (old price)
+            </summary>
+        </member>
+        <member name="P:VirtoCommerce.ExperienceApiModule.Core.Models.ProductPrice.ListPriceWithTax">
+            <summary>
+            Original product price (old price) including tax
+            </summary>
+        </member>
+        <member name="P:VirtoCommerce.ExperienceApiModule.Core.Models.ProductPrice.SalePrice">
+            <summary>
+            Sale product price (new price)
+            </summary>
+        </member>
+        <member name="P:VirtoCommerce.ExperienceApiModule.Core.Models.ProductPrice.SalePriceWithTax">
+            <summary>
+            Sale product price (new price) including tax
+            </summary>
+        </member>
+        <member name="P:VirtoCommerce.ExperienceApiModule.Core.Models.ProductPrice.ActualPrice">
+            <summary>
+            Actual price includes all kind of discounts
+            </summary>
+        </member>
+        <member name="P:VirtoCommerce.ExperienceApiModule.Core.Models.ProductPrice.ActualPriceWithTax">
+            <summary>
+            Actual price includes all kind of discounts including tax
+            </summary>
+        </member>
+        <member name="P:VirtoCommerce.ExperienceApiModule.Core.Models.ProductPrice.MinQuantity">
+            <summary>
+            It defines the minimum quantity of products
+            </summary>
+        </member>
+        <member name="P:VirtoCommerce.ExperienceApiModule.Core.Models.ProductPrice.TierPrices">
+            <summary>
+            Tier prices
+            </summary>
+        </member>
+        <member name="M:VirtoCommerce.ExperienceApiModule.Core.Models.ProductPrice.GetTierPrice(System.Int32)">
+            <summary>
+            Return tire price for passed quantity
+            </summary>
+            <param name="quantity"></param>
+            <returns></returns>
+        </member>
+        <member name="P:VirtoCommerce.ExperienceApiModule.Core.Models.ProductPrice.TaxTotal">
+            <summary>
+            Gets or sets the value of total shipping tax amount
+            </summary>
+        </member>
+        <member name="P:VirtoCommerce.ExperienceApiModule.Core.Models.ProductPrice.TaxType">
+            <summary>
+            Gets or sets the value of shipping tax type
+            </summary>
+        </member>
+        <member name="P:VirtoCommerce.ExperienceApiModule.Core.Models.ProductPrice.TaxDetails">
+            <summary>
+            Gets or sets the collection of line item tax details lines
+            </summary>
+            <value>
+            Collection of TaxDetail objects
+            </value>
+        </member>
+        <member name="P:VirtoCommerce.ExperienceApiModule.Core.Models.TierPrice.ActualPrice">
+            <summary>
+            Actual price includes all kind of discounts
+            </summary>
+        </member>
+        <member name="P:VirtoCommerce.ExperienceApiModule.Core.Models.TierPrice.TaxTotal">
+            <summary>
+            Gets or sets the value of total shipping tax amount
+            </summary>
+        </member>
+        <member name="P:VirtoCommerce.ExperienceApiModule.Core.Models.TierPrice.TaxType">
+            <summary>
+            Gets or sets the value of shipping tax type
+            </summary>
+        </member>
+        <member name="P:VirtoCommerce.ExperienceApiModule.Core.Models.TierPrice.TaxDetails">
+            <summary>
+            Gets or sets the collection of line item tax details lines
+            </summary>
+            <value>
+            Collection of TaxDetail objects
+            </value>
+        </member>
+        <member name="M:VirtoCommerce.ExperienceApiModule.Core.Queries.DynamicPropertyQueryHandler.Handle(VirtoCommerce.ExperienceApiModule.Core.Queries.GetDynamicPropertyQuery,System.Threading.CancellationToken)">
+            <summary>
+            Return single DynamicProperty
+            </summary>
+        </member>
+        <member name="M:VirtoCommerce.ExperienceApiModule.Core.Queries.DynamicPropertyQueryHandler.Handle(VirtoCommerce.ExperienceApiModule.Core.Queries.SearchDynamicPropertiesQuery,System.Threading.CancellationToken)">
+            <summary>
+            Return collection of DynamicPropertyEntites
+            </summary>
+        </member>
+        <member name="M:VirtoCommerce.ExperienceApiModule.Core.Queries.GetCountriesQueryHandler.Handle(VirtoCommerce.ExperienceApiModule.Core.Queries.GetCountriesQuery,System.Threading.CancellationToken)">
+            <summary>
+            Return countries list
+            </summary>
+        </member>
+        <member name="M:VirtoCommerce.ExperienceApiModule.Core.Queries.GetCountriesQueryHandler.Handle(VirtoCommerce.ExperienceApiModule.Core.Queries.GetRegionsQuery,System.Threading.CancellationToken)">
+            <summary>
+            Return regions of the country
+            </summary>
+        </member>
+        <member name="M:VirtoCommerce.ExperienceApiModule.Core.Services.DynamicPropertyResolverService.LoadDynamicPropertyValues(VirtoCommerce.Platform.Core.DynamicProperties.IHasDynamicProperties,System.String)">
+            <summary>
+            Load the dynamic property values for an entity. Include empty meta-data for missing values.
+            </summary>
+            <returns>Loaded Dynamic Property Values for specified entity</returns>
+        </member>
+        <member name="M:VirtoCommerce.ExperienceApiModule.Core.Services.DynamicPropertyUpdaterService.UpdateDynamicPropertyValues(VirtoCommerce.Platform.Core.DynamicProperties.IHasDynamicProperties,System.Collections.Generic.IList{VirtoCommerce.ExperienceApiModule.Core.Models.DynamicPropertyValue})">
+            <summary>
+            Updates object's dynamic properties by values collection.
+            A value object in the collection should have:
+            Name, this is the name of a dynamic property (DP metadata will be resolved by it);
+            Property value;
+            Locale (optional, for a multilanguage property).
+            </summary>
+            <param name="entity">Object that has dynamic properties.</param>
+            <param name="values">Collection on dynamic properties values.</param>
+            <returns></returns>
+        </member>
+        <member name="T:VirtoCommerce.ExperienceApiModule.Core.XCoreAnchor">
+            <summary>
+            Anchor class for easy DI GraphQL schemas
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,76 @@
+<div class="blade-static __bottom" ng-include="'$(Platform)/Scripts/common/templates/create.tpl.html'" ng-if="blade.isNew"></div>
+<div class="blade-content">
+    <div class="blade-inner">
+        <div class="inner-block clearfix">
+            <form class="form" name="formScope">
+                <ul class="list __info" ng-init="setForm(formScope)">
+
+                    <va-metaform registered-inputs="blade.metafields" blade="blade"></va-metaform>
+                </ul>
+            </form>
+        </div>
+    </div>
+</div>
+<script type="text/ng-template" id="currencyDetail-code.html">
+    <div class="form-input">
+        <input ng-model="blade.currentEntity.code" name="currencyCode" required ng-disabled="!blade.isNew" ng-maxlength="3" placeholder="{{ 'core.blades.currency-detail.placeholders.code' | translate }}" />
+    </div>
+    <div class="list-descr">{{ 'core.blades.currency-detail.descriptions.code' | translate }}</div>
+    <div class="form-error" ng-show="formScope.currencyCode.$error.maxlength">{{ 'core.blades.currency-detail.validation.maxlength' | translate }}</div>
+</script>
+<script type="text/ng-template" id="currencyDetail-name.html">
+    <div class="form-input">
+        <input placeholder="{{ 'core.blades.currency-detail.placeholders.name' | translate }}" ng-model="blade.currentEntity.name" focus-on="" required />
+    </div>
+    <div class="list-descr">{{ 'core.blades.currency-detail.descriptions.name' | translate }}</div>
+</script>
+<script type="text/ng-template" id="currencyDetail-isPrimary.html">
+    <div class="form-input">
+        <label class="form-label __switch">
+            <input type="checkbox" ng-model="blade.currentEntity.isPrimary" />
+            <span class="switch"></span>
+        </label>
+    </div>
+    <div class="list-descr">{{ 'core.blades.currency-detail.descriptions.is-primary' | translate }}</div>
+</script>
+<script type="text/ng-template" id="currencyDetail-exchangeRate.html">
+    <div class="form-input __number">
+        <input placeholder="{{ 'core.blades.currency-detail.placeholders.exchange-rate' | translate }}" smart-float required num-type="float" fraction="4" ng-model="blade.currentEntity.exchangeRate" min="0.0001">
+    </div>
+    <div class="list-descr">{{ 'core.blades.currency-detail.descriptions.exchange-rate' | translate }}</div>
+</script>
+<script type="text/ng-template" id="currencyDetail-symbol.html">
+    <div class="form-input">
+        <input placeholder="{{ 'core.blades.currency-detail.placeholders.symbol' | translate }}" ng-model="blade.currentEntity.symbol" />
+    </div>
+    <div class="list-descr">{{ 'core.blades.currency-detail.descriptions.symbol' | translate }}</div>
+</script>
+<script type="text/ng-template" id="currencyDetail-customFormatting.html">
+    <div class="form-input">
+        <input placeholder="{{ 'core.blades.currency-detail.placeholders.custom-formatting' | translate }}" ng-model="blade.currentEntity.customFormatting">
+    </div>
+    <div class="list-descr">{{ 'core.blades.currency-detail.descriptions.custom-formatting' | translate }}</div>
+</script>
+<script type="text/ng-template" id="currencyDetail-midpointRounding.html">
+    <div class="form-input">
+        <ui-select ng-model="blade.currentEntity.midpointRounding">
+            <ui-select-match placeholder="{{ 'core.blades.currency-detail.placeholders.midpoint-rounding' | translate }}">{{$select.selected}}</ui-select-match>
+            <ui-select-choices repeat="x as x in blade.midpointRoundings">
+                <span ng-bind-html="x"></span>
+            </ui-select-choices>
+        </ui-select>
+    </div>
+    <div class="list-descr">{{ 'core.blades.currency-detail.descriptions.midpoint-rounding' | translate }}</div>
+</script>
+<script type="text/ng-template" id="currencyDetail-roundingType.html">
+    <div class="form-input">
+        <ui-select ng-model="blade.currentEntity.roundingType">
+            <ui-select-match placeholder="{{ 'core.blades.currency-detail.placeholders.rounding-type' | translate }}">{{$select.selected}}</ui-select-match>
+            <ui-select-choices repeat="x as x in blade.roundingTypes">
+                <span ng-bind-html="x"></span>
+            </ui-select-choices>
+        </ui-select>
+    </div>
+    <div class="list-descr">{{ 'core.blades.currency-detail.descriptions.rounding-type' | translate }}</div>
+</script>
+

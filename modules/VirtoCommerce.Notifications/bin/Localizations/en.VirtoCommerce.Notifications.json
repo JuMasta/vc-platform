@@ -1,0 +1,275 @@
+{
+  "notifications": {
+    "blades": {
+      "notification-journal-details": {
+        "title": "Notification Details",
+        "subtitle": "{{ displayName }}: Notification type",
+        "labels": {
+          "id": "Message ID:",
+          "notification-info": "Notification Info",
+          "display-name": "Display name",
+          "source": "Source",
+          "sending-gateway": "Sending gateway",
+          "active": "Active",
+          "not-active": "Inactive",
+          "created": "Created at:",
+          "sent-success": "Sent successfully",
+          "not-sent": "Not sent",
+          "sent": "Sent",
+          "sent-date": "Send date",
+          "sender": "From:",
+          "recipient": "To:",
+          "bcc": "BCC",
+          "cc": "CC",
+          "sending-attempts-count": "Sending attempt count",
+          "last-fail-attempt-date": "Last failing attempt date",
+          "last-fail-attempt-message": "Errors:",
+          "subject": "Subject:",
+          "body": "Body:"
+        }
+      },
+      "notifications-edit-template": {
+        "title": "{{ displayName }}: Template",
+        "subtitle": "Edit notification template",
+        "title-new": "{{ displayName }}: Create template",
+        "labels": {
+          "note": "This is a list of notification optons. Copy and paste this code to insert the option values to your template.",
+          "parameter-name": "Option name",
+          "parameter-description": "Option description",
+          "paremeter-code": "Option code in the template (copy this code and insert it to any part of your template)",
+          "language": "Language",
+          "blank-note": "Leave this field blank to use your default value",
+          "from": "From",
+          "to": "To",
+          "cc": "CC",
+          "bcc": "BCC",
+          "subject": "Subject",
+          "body": "Body",
+          "template": "Template",
+          "preview-data": "Preview Data",
+          "preview-data-comment": "Template context data (JSON)",
+          "note-caption": "Important!",
+          "note-text": "This template has a predefined source. Once you save your notification, this version will replace the predefined one. You can restore the original template using the appropriate button."
+        },
+        "descriptions": {
+          "to": "Email recipient address",
+          "cc": "CC recipient addresses",
+          "bcc": "BCC recipient address",
+          "from": "Sender address",
+          "subject": "Subject of the email notification"
+        },
+        "placeholders": {
+          "language": "Please select...",
+          "recipient": "Recipient address",
+          "email-addresses-note": "Please enter email addresses",
+          "subject": "Please enter email subject"
+        }
+      },
+      "notification-templates-list": {
+        "title": "Notification templates",
+        "labels": {
+          "subject": "Subject",
+          "body": "Body",
+          "language": "Language",
+          "created": "Created",
+          "modified": "Modified",
+          "predefined": "Predefined",
+          "edited": "Edited"
+        }
+      },
+      "notifications-test-resolve": {
+        "title": "Preview notification",
+        "subtitle": "Enter test data for {{type}}",
+        "labels": {
+          "test": "Test",
+          "enter-test-data": "Enter test data"
+        }
+      },
+      "notifications-test-send": {
+        "title": "Send notification",
+        "subtitle": "Enter test data for {{type}}",
+        "labels": {
+          "send": "Send",
+          "enter-test-data": "Enter test data"
+        }
+      },
+      "notifications-journal": {
+        "title": "Notification activity feed",
+        "subtitle": "This section contains the list of all notifications recorded in the system",
+        "subtitle-search": "Search results for \"{{keyword}}\"",
+        "labels": {
+          "display-name": "Display Name",
+          "notification": "Notification",
+          "created": "Created",
+          "status": "Status",
+          "recipient": "Recipient",
+          "sent-date": "Send date",
+          "channel": "Channel",
+          "error": "Error",
+          "processing": "Processing",
+          "success": "Success",
+          "no-notifications": "No notifications yet",
+          "unnamed-filter": "Unnamed filter",
+          "filter-new": "<strong>Add new filter</strong>",
+          "filter-only-pending": "Only pending",
+          "filter-with-errors": "With errors",
+          "detail": "Show details",
+          "sendAttemptCount": "Sending attempt count",
+          "resend-messages": "Resend messages"
+        },
+        "placeholders": {
+          "select-filter": "Please select a filter"
+        }
+      },
+      "notifications-list": {
+        "title": "Notification list",
+        "subtitle": "This section contains the list of all notifications registered in the system",
+        "labels": {
+          "no-notifications": "No registered notifications yet",
+          "display-name": "Display Name",
+          "type": "Type",
+          "active": "Active"
+        }
+      },
+      "notification-details": {
+        "title": "{{ displayName }}: Details",
+        "labels": {
+          "is-active": "Active",
+          "name": "Notification name",
+          "number": "Phone number"
+        },
+        "placeholders": {
+          "number": "Text message phone number"
+        },
+        "descriptions": {
+          "number": "Phone number that will get the text message (SMS) notification"
+        }
+      },
+      "filter-detail": {
+        "subtitle": "Edit filter",
+        "new-title": "New filter",
+        "new-subtitle": "Create new filter",
+        "labels": {
+          "criteria": "Search phrase",
+          "name": "Filter name"
+        },
+        "placeholders": {
+          "criteria": "Please enter search phrase",
+          "name": "Please give this filter a name"
+        }
+      },
+      "notifications-template-render": {
+        "title": "Preview form",
+        "subtitle": "This form renders a template"
+      }
+    },
+    "widgets": {
+      "notificationsTemplatesWidget": {
+        "title": "Templates",
+        "blade-title": "{{displayName}}: Template list",
+        "blade-subtitle": "Manage notification templates"
+      },
+      "notificationsLogWidget": {
+        "title": "Notification log",
+        "blade-title": "Log storing data on notifications",
+        "blade-subtitle": "View notification log"
+      },
+      "notificationsAttachmentsWidget": {
+        "title": "Attachments (Coming Soon)",
+        "blade-title": "Attachments",
+        "blade-subtitle": "Attachments"
+      }
+    },
+    "dialogs": {
+      "unknown-kind": {
+        "title": "Error",
+        "message": "Unable to edit template of an unknown type: '{{kind}}'."
+      },
+      "notification-details-save": {
+        "title": "Save changes",
+        "message": "The notification template has been modified. Do you want to save changes?"
+      },
+      "notification-template-delete": {
+        "title": "Confirm Delete",
+        "message": "Are you sure you want to delete the selected templates?"
+      },
+      "notification-template-delete-notification": {
+        "title": "Unable to delete template",
+        "message": "You cannot delete default or predefined templates. Please deselect such templates and try again."
+      },
+      "notification-template-reset-confirmation": {
+        "title": "Confirm Reset Template",
+        "warning": "WARNING: This change is permanent and cannot be undone. Applying this change may result in a data loss.",
+        "message": "{{count}} template(s) for the following languages will be deleted:",
+        "instruction": "Type Yes to delete:"
+      }
+    },
+    "commands": {
+      "restore": "Restore"
+    }
+  },
+  "notificationTypes": {
+    "UnregisteredNotification": {
+      "displayName": "Unregistered notification",
+      "description": "Original notification type: {{type}}"
+    },
+    "RegistrationEmailNotification": {
+      "displayName": "Signup notification",
+      "description": "The customer will get an email notification once they have registered"
+    },
+    "ResetPasswordEmailNotification": {
+      "displayName": "Reset password notification",
+      "description": "The customer will get an email notification upon a reset password request"
+    },
+    "TwoFactorEmailNotification": {
+      "displayName": "Two factor authentication",
+      "description": "This notification contains a security token for two factor authentication"
+    },
+    "TwoFactorSmsNotification": {
+      "displayName": "Two factor authentication",
+      "description": "This notification contains a security token for two factor authentication"
+    },
+    "ConfirmationEmailNotification": {
+      "displayName": "Email confirmation",
+      "description": "This email notification confirms the newly registered user's email"
+    },
+    "ChangePhoneNumberSmsNotification": {
+      "displayName": "Phone number change notification",
+      "description": "The customer will get a text message once their phone number has been changed"
+    },
+    "ResetPasswordSmsNotification": {
+      "displayName": "Reset password text notification",
+      "description": "The customer will get a text message when their password has been reset"
+    },
+    "RegistrationInvitationEmailNotification": {
+      "displayName": "Signup invite notification",
+      "description": "The customer will get an email notification once they receive an invite to sign up"
+    },
+    "RemindUserNameEmailNotification": {
+      "displayName": "Forgot username notification",
+      "description": "The customer will get an email notification after they click Forgot My Username"
+    }
+  },
+  "permissions": {
+    "notifications:read": "Read notification data",
+    "notifications:create": "Create notification data",
+    "notifications:update": "Update notification data",
+    "notifications:delete": "Delete notification data",
+    "notifications:access": "Access notification data",
+    "notifications:export": "Export notification data",
+    "notifications:import": "Import notification data",
+    "notifications:templates:read": "Read template data",
+    "notifications:templates:create": "Create template data"
+  },
+  "settings": {
+    "VirtoCommerce.Notifications.General.Languages": {
+      "description": "List of languages available for notifications",
+      "title": "Languages"
+    }
+  },
+  "module": {
+    "VirtoCommerce.Notifications": {
+      "description": "Export or import notifications"
+    }
+  }
+}

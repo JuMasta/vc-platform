@@ -1,0 +1,78 @@
+<div class="blade-static __bottom" ng-include="'$(Platform)/Scripts/common/templates/create.tpl.html'" ng-if="blade.isNew"></div>
+<div class="blade-content">
+    <div class="blade-inner">
+        <div class="inner-block clearfix" ng-controller="virtoCommerce.customerModule.employeeDetailController">
+            <form class="form" name="detailForm">
+                <va-metaform registered-inputs="blade.metaFields0" blade="blade" column-count="2"></va-metaform>
+
+                <div class="form-group" ng-init="setForm(detailForm)">
+                    <va-widget-container group="employeeDetail1" blade="blade" gridster-opts="{columns: 3}"></va-widget-container>
+                </div>
+
+                <va-metaform registered-inputs="blade.metaFields" blade="blade" column-count="2"></va-metaform>
+
+                <div class="form-group">
+                    <va-widget-container group="employeeDetail2" blade="blade" data="blade.currentEntity" gridster-opts="{columns: 3}"></va-widget-container>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script type="text/ng-template" id="firstName.html">
+    <div class="form-input">
+        <input ng-model="blade.currentEntity.firstName" ng-blur="blade.currentEntity.fullName=blade.currentEntity.firstName+' '+blade.currentEntity.lastName" focus-on="" required placeholder="{{'customer.blades.employee-detail.placeholders.first-name' | translate}}" />
+    </div>
+</script>
+<script type="text/ng-template" id="lastName.html">
+    <div class="form-input">
+        <input ng-model="blade.currentEntity.lastName" ng-blur="blade.currentEntity.fullName=blade.currentEntity.firstName+' '+blade.currentEntity.lastName" required placeholder="{{'customer.blades.employee-detail.placeholders.last-name' | translate}}" />
+    </div>
+</script>
+<script type="text/ng-template" id="fullName.html">
+    <div class="form-input">
+        <input ng-model="blade.currentEntity.fullName" ng-blur="!blade.currentEntity.fullName && (blade.currentEntity.fullName=blade.currentEntity.firstName+' '+blade.currentEntity.lastName)" placeholder="{{'customer.blades.employee-detail.placeholders.full-name' | translate}}" />
+    </div>
+</script>
+<script type="text/ng-template" id="status.html">
+    <div class="form-group">
+        <label class="form-label">
+            {{ 'customer.blades.shared.labels.status' | translate }}
+            <a href="" ng-click="blade.openStatusSettingManagement('Customer.EmployeeStatuses')" class="form-edit" va-permission="platform:setting:update"><i class="form-ico fa fa-pencil"></i></a>
+        </label>
+        <div class="form-input">
+            <ui-select ng-model="blade.currentEntity.status" ng-init="blade.loadStatuses('Customer.EmployeeStatuses')">
+                <ui-select-match placeholder="{{ 'customer.blades.shared.placeholders.status' | translate }}">{{ blade.currentEntity.status }}</ui-select-match>
+                <ui-select-choices repeat="x in blade.statuses | filter: $select.search">
+                    <span ng-bind-html="x | highlight: $select.search"></span>
+                </ui-select-choices>
+            </ui-select>
+        </div>
+    </div>
+</script>
+
+<script type="text/ng-template" id="birthDate.html">
+    <div class="form-input __calendar">
+        <input type="text" class="form-control" ng-model="blade.currentEntity.birthDate" datepicker-popup name="bd" is-open="blade.datepickers.bd" max-date="blade.today" placeholder="{{'customer.blades.employee-detail.placeholders.birthday' | translate}}" />
+        <button class="btn" type="button" ng-click="blade.open($event,'bd')">
+            <i class="btn-ico fa fa-calendar"></i>
+        </button>
+    </div>
+</script>
+<script type="text/ng-template" id="organizations.html">
+    <ui-select multiple ng-model="blade.currentEntity.organizations">
+        <ui-select-match placeholder="{{'customer.blades.contact-detail.placeholders.organizations' | translate}}">{{$item.name}}</ui-select-match>
+        <ui-select-choices repeat="x.id as x in blade.organizations" refresh="blade.fetchOrganizations($select)" when-scrolled="blade.fetchNextOrganizations($select)">
+            <span ng-bind-html="x.name | highlight: $select.search"></span>
+        </ui-select-choices>
+    </ui-select>
+</script>
+<script type="text/ng-template" id="timeZone.html">
+    <div class="form-input">
+        <ui-select ng-model="blade.currentEntity.timeZone">
+            <ui-select-match placeholder="{{'customer.blades.employee-detail.placeholders.timezone' | translate }}">{{$select.selected.name}}</ui-select-match>
+            <ui-select-choices repeat="x.id as x in blade.timeZones | filter: { name: $select.search }">
+                <span ng-bind-html="x.name | highlight: $select.search"></span>
+            </ui-select-choices>
+        </ui-select>
+    </div>
+</script>

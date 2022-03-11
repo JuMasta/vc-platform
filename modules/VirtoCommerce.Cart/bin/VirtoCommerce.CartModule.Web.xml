@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>VirtoCommerce.CartModule.Web</name>
+    </assembly>
+    <members>
+        <member name="M:VirtoCommerce.CartModule.Web.Controllers.Api.CartModuleController.GetCartById(System.String)">
+            <summary>
+            Get shopping cart by id
+            </summary>
+            <param name="cartId">Shopping cart id</param>
+        </member>
+        <member name="M:VirtoCommerce.CartModule.Web.Controllers.Api.CartModuleController.SearchShoppingCart(VirtoCommerce.CartModule.Core.Model.Search.ShoppingCartSearchCriteria)">
+            <summary>
+            Search shopping carts by given criteria
+            </summary>
+            <param name="criteria">Shopping cart search criteria</param>
+        </member>
+        <member name="M:VirtoCommerce.CartModule.Web.Controllers.Api.CartModuleController.Create(VirtoCommerce.CartModule.Core.Model.ShoppingCart)">
+            <summary>
+            Create shopping cart
+            </summary>
+            <param name="cart">Shopping cart model</param>
+        </member>
+        <member name="M:VirtoCommerce.CartModule.Web.Controllers.Api.CartModuleController.UpdateShoppingCart(VirtoCommerce.CartModule.Core.Model.ShoppingCart)">
+            <summary>
+            Update shopping cart
+            </summary>
+            <param name="cart">Shopping cart model</param>
+        </member>
+        <member name="M:VirtoCommerce.CartModule.Web.Controllers.Api.CartModuleController.DeleteCarts(System.String[])">
+            <summary>
+            Delete shopping carts by ids
+            </summary>
+            <param name="ids">Array of shopping cart ids</param>
+        </member>
+        <member name="M:VirtoCommerce.CartModule.Web.Controllers.Api.CartModuleController.RecalculateTotals(VirtoCommerce.CartModule.Core.Model.ShoppingCart)">
+            <summary>
+            Calculates totals for cart.
+            </summary>
+            <param name="cart">Shopping cart model</param>
+        </member>
+    </members>
+</doc>

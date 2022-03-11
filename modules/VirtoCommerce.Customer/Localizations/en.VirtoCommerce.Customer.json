@@ -1,0 +1,302 @@
+{
+  "customer": {
+    "main-menu-title": "Contacts",
+    "blades": {
+      "contact-detail": {
+        "title-new": "New Contact",
+        "subtitle": "Contact details",
+        "labels": {
+          "first-name": "First name",
+          "middle-name": "Middle name",
+          "last-name": "Last name",
+          "groups": "User groups",
+          "full-name": "Full name",
+          "birthday": "Birth date",
+          "salutation": "Title",
+          "defaultLanguage": "Default language",
+          "organizations": "Member of company(ies)",
+          "associated-organizations": "Associated company(ies)",
+          "taxpayerId": "Taxpayer ID",
+          "preferred-communication": "Preferred communication channel",
+          "preferred-delivery": "Preferred delivery method",
+          "timezone": "Time zone"
+        },
+        "placeholders": {
+          "groups": "Select user groups",
+          "first-name": "Please specify a value",
+          "middle-name": "Please specify a value",
+          "last-name": "Please specify a value",
+          "full-name": "Please specify a value",
+          "birthday": "Please specify a value",
+          "salutation": "Please specify a value",
+          "defaultLanguage": "Please specify a value",
+          "preferred-communication": "Please specify a value",
+          "preferred-delivery": "Please specify a value",
+          "taxpayerId": "Please specify a value",
+          "organizations": "Please select a company",
+          "associated-organizations": "Please select a company",
+          "timezone": "Please select"
+        }
+      },
+      "employee-detail": {
+        "title-new": "New Employee",
+        "subtitle": "Employee details",
+        "labels": {
+          "is-active": "Active",
+          "first-name": "First name",
+          "middle-name": "Middle name",
+          "last-name": "Last name",
+          "full-name": "Full name",
+          "type": "Employee type",
+          "birthday": "Birth date",
+          "photo-url": "Photo URL",
+          "defaultLanguage": "Default language",
+          "organizations": "Company(ies)",
+          "timezone": "Time zone"
+        },
+        "placeholders": {
+          "first-name": "Please specify a value",
+          "middle-name": "Please specify a value",
+          "last-name": "Please specify a value",
+          "full-name": "Please specify a value",
+          "type": "Please specify a value",
+          "birthday": "Please specify a value",
+          "photo-url": "Please enter URL",
+          "defaultLanguage": "Please specify a value",
+          "organizations": "Please select a company",
+          "timezone": "Please select a value"
+        }
+      },
+      "pick-store-list": {
+        "title": "New Account",
+        "subtitle": "Select a store for the new account",
+        "labels": {
+          "name": "Store name"
+        }
+      },
+      "organization-detail": {
+        "title-new": "New Company",
+        "subtitle": "Company details",
+        "labels": {
+          "name": "Name",
+          "description": "Description",
+          "business-category": "Business domain"
+        },
+        "placeholders": {
+          "name": "Enter name",
+          "description": "Please provide description"
+        }
+      },
+      "vendor-detail": {
+        "title-new": "New Vendor",
+        "subtitle": "Vendor details",
+        "labels": {
+          "name": "Name",
+          "site-url": "Website URL",
+          "logo-url": "Logo URL",
+          "group-name": "Group name",
+          "description": "Description"
+        },
+        "placeholders": {
+          "name": "Please enter name",
+          "site-url": "Please enter URL",
+          "logo-url": "Please enter URL",
+          "group-name": "Please specify a value",
+          "description": "Please provide description"
+        }
+      },
+      "member-add": {
+        "title": "New Contact",
+        "subtitle": "Select a type of contact you would like to create",
+        "organization": {
+          "description": "A company profile that may house information on employees, regular contacts, or other companies"
+        },
+        "employee": {
+          "description": "An employee that works in a company"
+        },
+        "contact": {
+          "description": "A store customer that may either be a member of a company or act as an individual shopper"
+        },
+        "vendor": {
+          "description": "A merchant or vendor"
+        }
+      },
+      "member-emails-list": {
+        "labels": {
+          "no-emails": "No emails yet",
+          "name": "Name",
+          "address": "Address",
+          "Email": "Email"
+        },
+        "placeholders": {
+          "email": "Please specify a value"
+        }
+      },
+      "member-list": {
+        "title": "Companies and Contacts",
+        "subtitle": "Loading '{{name}}'",
+        "breadcrumb-all": "All contacts",
+        "labels": {
+          "type": "Type",
+          "name": "Name",
+          "address": "Address",
+          "email": "Email",
+          "filter-new": "Add new filter",
+          "unnamed-filter": "Unnamed filter",
+          "filter-vendor": "Vendors",
+          "filter-contact": "Contacts",
+          "filter-organization": "Companies"
+        },
+        "placeholders": {
+          "select-filter": "Please select a filter"
+        }
+      },
+      "member-phones-list": {
+        "labels": {
+          "no-phones": "No phone numbers yet"
+        },
+        "placeholders": {
+          "phone": "Please enter phone number..."
+        }
+      },
+      "customer-accounts-list": {
+        "commands": {
+          "link": "Link account",
+          "unlink": "Unlink account"
+        }
+      },
+      "filter-detail": {
+        "subtitle": "Edit filter",
+        "new-title": "New Filter",
+        "new-subtitle": "Creating a new filter",
+        "labels": {
+          "criteria": "Search phrase",
+          "name": "Filter name",
+          "searchInVariations": "Display product variations",
+          "syntax-example-1": "All contacts containing 'org1.com' in the indexed property values",
+          "syntax-example-2": "All contacts containing 'James' and 'Smith' in the indexed property values",
+          "syntax-example-3": "Use an asterisk (*) to replace zero or more characters",
+          "syntax-example-4": "All contacts with first name containing 'Alex' or 'James' ",
+          "syntax-example-5": "Use exclamation (!) as a NOT operator for filters",
+          "syntax-example-6": "All contacts with the selected member type",
+          "syntax-example-7": "All contacts with a create date between two values (inclusive) ",
+          "syntax-example-8": "All contacts with a create date between two values (exclusive)",
+          "syntax-example-9": "All contacts with a modify date greater than or equaling '2016-12-26'",
+          "syntax-example-10": "Combine both keywords and filters"
+        },
+        "placeholders": {
+          "criteria": "Please enter search phrase",
+          "name": "Please give this filter a name"
+        }
+      },
+      "shared": {
+        "labels": {
+          "status": "Status"
+        },
+        "placeholders": {
+          "status": "Please select a value"
+        }
+      }
+    },
+    "widgets": {
+      "address-list": {
+        "title": "Addresses",
+        "blade-subtitle": "Manage addresses"
+      },
+      "member-emails-list": {
+        "title": "Emails",
+        "blade-subtitle": "Manage emails"
+      },
+      "member-phones-list": {
+        "title": "Phone numbers",
+        "blade-subtitle": "Manage phone numbers"
+      },
+      "customer-accounts-list": {
+        "title": "Accounts",
+        "blade-subtitle": "Manage customer accounts"
+      }
+    },
+    "dialogs": {
+      "members-delete": {
+        "title": "Confirm Delete",
+        "message": "Are you sure you want to delete the selected company(ies) or contact(s)?"
+      },
+      "unknown-member-type": {
+        "title": "Error",
+        "message": "Cannot edit member of an unknown type: '{{memberType}}'"
+      },
+      "member-save": {
+        "title": "Save changes",
+        "message": "This contact has been modified. Do you want to save changes?"
+      },
+      "email-save": {
+        "title": "Save changes",
+        "message": "The email has been modified. Do you want to save changes?"
+      },
+      "phone-number-save": {
+        "title": "Save changes",
+        "message": "The phone number has been modified. Do you want to save changes?"
+      }
+    }
+  },
+  "permissions": {
+    "customer:access": "Open customer menu",
+    "customer:create": "Create customer data",
+    "customer:read": "View customer data",
+    "customer:update": "Update customer data",
+    "customer:delete": "Delete customer data"
+  },
+  "settings": {
+    "Customer": {
+      "MemberGroups": {
+        "title": "Member group dictionary",
+        "description": "All available member group values"
+      },
+      "ExportImport.PageSize": {
+        "title": "Page size being used for Export / Import",
+        "description": "Note: Large values may result in decreased performance"
+      },
+      "Search": {
+        "EventBasedIndexation": {
+          "Enable": {
+            "title": "Enable event-based indexing for customer entities (restart required)",
+            "description": "Any change to a customer entity will trigger a background task that will apply these changes to the search index."
+          }
+        }
+      },
+      "OrganizationStatuses": {
+        "title": "Company statuses",
+        "description": "Edit company statuses"
+      },
+      "VendorStatuses": {
+        "title": "Vendor statuses",
+        "description": "Edit vendor statuses"
+      },
+      "EmployeeStatuses": {
+        "title": "Employee statuses",
+        "description": "Edit employee statuses"
+      },
+      "ContactStatuses": {
+        "title": "Contact statuses",
+        "description": "Edit contact statuses"
+      }
+    },
+    "VirtoCommerce": {
+      "Search": {
+        "IndexingJobs": {
+          "IndexationDate": {
+            "Member": {
+              "title": "Member indexing date and time",
+              "description": "Date and time the member indexing task will start at"
+            }
+          }
+        }
+      }
+    }
+  },
+  "module": {
+    "VirtoCommerce.Customer": {
+      "description": "Export or import contacts and companies"
+    }
+  }
+}

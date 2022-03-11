@@ -1,0 +1,28 @@
+.long-reward-expression {
+    width: 230px;
+    vertical-align: bottom;
+    display: inline-block;
+}
+
+.head-label {
+    font-size: 17px;
+    margin-bottom: 15px;
+}
+
+.head-select {
+    width: calc(100% - 120px);
+}
+
+button.btn.add-price-button {
+    background: #43b0e6;
+    color: #fff;
+    height: 30px;
+    line-height: 28px;
+    padding: 0 10px;
+}
+
+    button.btn.add-price-button:hover {
+        background: #43b0e6;
+    }
+
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9WaXJ0b0NvbW1lcmNlLlByaWNpbmcvLi9Db250ZW50L2Nzcy9keW5hbWljLWV4cHJlc3Npb25zLmNzcyIsIndlYnBhY2s6Ly9WaXJ0b0NvbW1lcmNlLlByaWNpbmcvLi9Db250ZW50L2Nzcy9wcmljaW5nLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOztBQ0pBO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0EsSyIsImZpbGUiOiJzdHlsZS5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIubG9uZy1yZXdhcmQtZXhwcmVzc2lvbiB7XG4gICAgd2lkdGg6IDIzMHB4O1xuICAgIHZlcnRpY2FsLWFsaWduOiBib3R0b207XG4gICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xufVxuIiwiLmhlYWQtbGFiZWwge1xuICAgIGZvbnQtc2l6ZTogMTdweDtcbiAgICBtYXJnaW4tYm90dG9tOiAxNXB4O1xufVxuXG4uaGVhZC1zZWxlY3Qge1xuICAgIHdpZHRoOiBjYWxjKDEwMCUgLSAxMjBweCk7XG59XG5cbmJ1dHRvbi5idG4uYWRkLXByaWNlLWJ1dHRvbiB7XG4gICAgYmFja2dyb3VuZDogIzQzYjBlNjtcbiAgICBjb2xvcjogI2ZmZjtcbiAgICBoZWlnaHQ6IDMwcHg7XG4gICAgbGluZS1oZWlnaHQ6IDI4cHg7XG4gICAgcGFkZGluZzogMCAxMHB4O1xufVxuXG4gICAgYnV0dG9uLmJ0bi5hZGQtcHJpY2UtYnV0dG9uOmhvdmVyIHtcbiAgICAgICAgYmFja2dyb3VuZDogIzQzYjBlNjtcbiAgICB9Il0sInNvdXJjZVJvb3QiOiIifQ==*/

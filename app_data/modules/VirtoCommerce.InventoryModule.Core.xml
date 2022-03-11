@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>VirtoCommerce.InventoryModule.Core</name>
+    </assembly>
+    <members>
+        <member name="T:VirtoCommerce.InventoryModule.Core.Services.IFulfillmentCenterSearchService">
+            <summary>
+            This interface should implement <![CDATA[<see cref="SearchService<FulfillmentCenter>"/>]]> without methods.
+            Methods left for compatibility and should be removed after upgrade to inheritance
+            </summary>
+        </member>
+        <member name="T:VirtoCommerce.InventoryModule.Core.Services.IFulfillmentCenterService">
+            <summary>
+            This interface should implement <![CDATA[<see cref="ICrudService<FulfillmentCenter>"/>]]> without methods.
+            Methods left for compatibility and should be removed after upgrade to inheritance
+            </summary>
+        </member>
+        <member name="T:VirtoCommerce.InventoryModule.Core.Services.IProductInventorySearchService">
+            <summary>
+            This interface is intended to search  the product inventories within all fulfillment centers, do a LeftJoin search with fulfillment centers and return  InventoryInfo
+            object for each Fulfillment center registered in the system even if it won't have an inventory record for a given product 
+            </summary>
+        </member>
+    </members>
+</doc>

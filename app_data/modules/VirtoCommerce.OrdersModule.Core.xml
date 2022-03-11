@@ -1,0 +1,228 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>VirtoCommerce.OrdersModule.Core</name>
+    </assembly>
+    <members>
+        <member name="P:VirtoCommerce.OrdersModule.Core.Model.CustomerOrder.ShoppingCartId">
+            <summary>
+            The basis shopping cart id of which the order was created
+            </summary>
+        </member>
+        <member name="P:VirtoCommerce.OrdersModule.Core.Model.CustomerOrder.IsPrototype">
+            <summary>
+            Flag determines that the order is the prototype
+            </summary>
+        </member>
+        <member name="P:VirtoCommerce.OrdersModule.Core.Model.CustomerOrder.PurchaseOrderNumber">
+            <summary>
+            Internal number of order provided by customer
+            </summary>
+        </member>
+        <member name="P:VirtoCommerce.OrdersModule.Core.Model.CustomerOrder.SubscriptionNumber">
+            <summary>
+            Number for subscription  associated with this order
+            </summary>
+        </member>
+        <member name="P:VirtoCommerce.OrdersModule.Core.Model.CustomerOrder.SubscriptionId">
+            <summary>
+            Identifier for subscription  associated with this order
+            </summary>
+        </member>
+        <member name="P:VirtoCommerce.OrdersModule.Core.Model.CustomerOrder.DiscountAmount">
+            <summary>
+            When a discount is applied to the order, the tax calculation has already been applied, and is reflected in the tax.
+            Therefore, a discount applying to the order  will occur after tax. 
+            For instance, if the cart subtotal is $100, and $15 is the tax subtotal, a cart-wide discount of 10% will yield a total of $105 ($100 subtotal – $10 discount + $15 tax on the original $100).
+            </summary>
+        </member>
+        <member name="P:VirtoCommerce.OrdersModule.Core.Model.CustomerOrder.Total">
+            <summary>
+            Grand order total
+            </summary>
+        </member>
+        <member name="P:VirtoCommerce.OrdersModule.Core.Model.CustomerOrder.TaxType">
+            <summary>
+            Tax category or type
+            </summary>
+        </member>
+        <member name="P:VirtoCommerce.OrdersModule.Core.Model.LineItem.PriceId">
+            <summary>
+            Price id
+            </summary>
+        </member>
+        <member name="P:VirtoCommerce.OrdersModule.Core.Model.LineItem.Price">
+            <summary>
+             unit price without discount and tax
+            </summary>
+        </member>
+        <member name="P:VirtoCommerce.OrdersModule.Core.Model.LineItem.PlacedPrice">
+            <summary>
+            Resulting price with discount for one unit
+            </summary>
+        </member>
+        <member name="P:VirtoCommerce.OrdersModule.Core.Model.LineItem.DiscountAmount">
+            <summary>
+            Gets the value of the single qty line item discount amount
+            </summary>
+        </member>
+        <member name="P:VirtoCommerce.OrdersModule.Core.Model.LineItem.TaxType">
+            <summary>
+            Tax category or type
+            </summary>
+        </member>
+        <member name="P:VirtoCommerce.OrdersModule.Core.Model.LineItem.ReserveQuantity">
+            <summary>
+            Reserve quantity
+            </summary>
+        </member>
+        <member name="P:VirtoCommerce.OrdersModule.Core.Model.OrderOperation.CancelledState">
+            <summary>
+            For system use to handle canellation flow
+            </summary>
+        </member>
+        <member name="P:VirtoCommerce.OrdersModule.Core.Model.OrderOperation.IsCancelled">
+            <summary>
+            Used by payment provides to indicate that cancellation operation has completed
+            </summary>
+        </member>
+        <member name="P:VirtoCommerce.OrdersModule.Core.Model.PaymentGatewayTransaction.IsProcessed">
+            <summary>
+            Flag represent that current transaction is processed
+            </summary>
+        </member>
+        <member name="P:VirtoCommerce.OrdersModule.Core.Model.PaymentGatewayTransaction.ProcessedDate">
+            <summary>
+            Date when this transaction was handled 
+            </summary>
+        </member>
+        <member name="P:VirtoCommerce.OrdersModule.Core.Model.PaymentGatewayTransaction.RequestData">
+            <summary>
+            Raw request data
+            </summary>
+        </member>
+        <member name="P:VirtoCommerce.OrdersModule.Core.Model.PaymentGatewayTransaction.ResponseData">
+            <summary>
+            Raw response data
+            </summary>
+        </member>
+        <member name="P:VirtoCommerce.OrdersModule.Core.Model.PaymentGatewayTransaction.ResponseCode">
+            <summary>
+            Gateway or VC response status code  
+            </summary>
+        </member>
+        <member name="P:VirtoCommerce.OrdersModule.Core.Model.PaymentGatewayTransaction.GatewayIpAddress">
+            <summary>
+            Gateway IP address
+            </summary>
+        </member>
+        <member name="P:VirtoCommerce.OrdersModule.Core.Model.PaymentGatewayTransaction.Type">
+            <summary>
+            The type of payment interaction.The payment can be Capture or CheckReceived. 
+            The value also includes customer payment interactions such as Website, Call, Store, or Unknown.
+            </summary>
+        </member>
+        <member name="P:VirtoCommerce.OrdersModule.Core.Model.PaymentGatewayTransaction.Status">
+            <summary>
+            "Active", "Expired", and "Inactive" or other
+            </summary>
+        </member>
+        <member name="P:VirtoCommerce.OrdersModule.Core.Model.PaymentIn.GatewayCode">
+            <summary>
+            Payment method (gateway) code
+            </summary>
+        </member>
+        <member name="P:VirtoCommerce.OrdersModule.Core.Model.PaymentIn.PaymentMethod">
+            <summary>
+            Payment method contains additional payment method information
+            </summary>
+        </member>
+        <member name="P:VirtoCommerce.OrdersModule.Core.Model.PaymentIn.TaxType">
+            <summary>
+            Tax category or type
+            </summary>
+        </member>
+        <member name="P:VirtoCommerce.OrdersModule.Core.Model.Search.CustomerOrderSearchCriteria.WithPrototypes">
+            <summary>
+            Search orders with flag IsPrototype
+            </summary>
+        </member>
+        <member name="P:VirtoCommerce.OrdersModule.Core.Model.Search.CustomerOrderSearchCriteria.OnlyRecurring">
+            <summary>
+            Search only recurring orders created by subscription
+            </summary>
+        </member>
+        <member name="P:VirtoCommerce.OrdersModule.Core.Model.Search.CustomerOrderSearchCriteria.SubscriptionId">
+            <summary>
+            Search orders with given subscription
+            </summary>
+        </member>
+        <member name="F:VirtoCommerce.OrdersModule.Core.Model.Search.CustomerOrderSearchCriteria._subscriptionIds">
+            <summary>
+            Search orders with given subscriptions
+            </summary>
+        </member>
+        <member name="P:VirtoCommerce.OrdersModule.Core.Model.Search.CustomerOrderSearchCriteria.OperationId">
+            <summary>
+            It used to limit search within an operation (customer order for example)
+            </summary>
+        </member>
+        <member name="P:VirtoCommerce.OrdersModule.Core.Model.Search.OrderOperationSearchCriteriaBase.Status">
+            <summary>
+            Search by status
+            </summary>
+        </member>
+        <member name="P:VirtoCommerce.OrdersModule.Core.Model.Search.OrderOperationSearchCriteriaBase.Number">
+            <summary>
+            Search by numbers
+            </summary>
+        </member>
+        <member name="P:VirtoCommerce.OrdersModule.Core.Model.Search.PaymentSearchCriteria.OrderId">
+            <summary>
+            It used to limit search within a customer order id
+            </summary>
+        </member>
+        <member name="P:VirtoCommerce.OrdersModule.Core.Model.Search.PaymentSearchCriteria.OrderNumber">
+            <summary>
+            It used to limit search within a customer order number
+            </summary>
+        </member>
+        <member name="P:VirtoCommerce.OrdersModule.Core.Model.Search.PaymentSearchCriteria.CustomerId">
+            <summary>
+            Filter payments by customer 
+            </summary>
+        </member>
+        <member name="P:VirtoCommerce.OrdersModule.Core.Model.Shipment.ShipmentMethodCode">
+            <summary>
+            Current shipment method code 
+            </summary>
+        </member>
+        <member name="P:VirtoCommerce.OrdersModule.Core.Model.Shipment.ShipmentMethodOption">
+            <summary>
+            Current shipment option code 
+            </summary>
+        </member>
+        <member name="P:VirtoCommerce.OrdersModule.Core.Model.Shipment.ShippingMethod">
+            <summary>
+             Shipment method contains additional shipment method information
+            </summary>
+        </member>
+        <member name="P:VirtoCommerce.OrdersModule.Core.Model.Shipment.TaxType">
+            <summary>
+            Tax category or type
+            </summary>
+        </member>
+        <member name="T:VirtoCommerce.OrdersModule.Core.Services.ICustomerOrderSearchService">
+            <summary>
+            This interface should implement <![CDATA[<see cref="SearchService<CustomerOrder>"/>]]> without methods.
+            Methods left for compatibility and should be removed after upgrade to inheritance
+            </summary>
+        </member>
+        <member name="T:VirtoCommerce.OrdersModule.Core.Services.IPaymentSearchService">
+            <summary>
+            This interface should implement <![CDATA[<see cref="SearchService<PaymentIn>"/>]]> without methods.
+            Methods left for compatibility and should be removed after upgrade to inheritance
+            </summary>
+        </member>
+    </members>
+</doc>

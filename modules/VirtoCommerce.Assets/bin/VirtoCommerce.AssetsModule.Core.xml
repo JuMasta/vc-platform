@@ -1,0 +1,137 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>VirtoCommerce.AssetsModule.Core</name>
+    </assembly>
+    <members>
+        <member name="P:VirtoCommerce.AssetsModule.Core.Assets.AssetEntry.LanguageCode">
+            <summary>
+            Asset language
+            </summary>
+        </member>
+        <member name="P:VirtoCommerce.AssetsModule.Core.Assets.AssetEntry.Group">
+            <summary>
+            User defined grouping (optional)
+            </summary>
+        </member>
+        <member name="P:VirtoCommerce.AssetsModule.Core.Assets.BlobInfo.Key">
+            <summary>
+            Relative url
+            </summary>
+        </member>
+        <member name="T:VirtoCommerce.AssetsModule.Core.Assets.IBlobStorageProvider">
+            <summary>
+            Represent abstraction for working with binary data
+            </summary>
+        </member>
+        <member name="M:VirtoCommerce.AssetsModule.Core.Assets.IBlobStorageProvider.SearchAsync(System.String,System.String)">
+            <summary>
+            SearchAsync blobs by specified criteria
+            </summary>
+            <param name="folderUrl"></param>
+            <param name="keyword"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VirtoCommerce.AssetsModule.Core.Assets.IBlobStorageProvider.GetBlobInfoAsync(System.String)">
+            <summary>
+            Get blob info by URL
+            </summary>
+            <param name="blobUrl"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VirtoCommerce.AssetsModule.Core.Assets.IBlobStorageProvider.CreateFolderAsync(VirtoCommerce.AssetsModule.Core.Assets.BlobFolder)">
+            <summary>
+            Create blob folder
+            </summary>
+            <param name="folder"></param>
+        </member>
+        <member name="M:VirtoCommerce.AssetsModule.Core.Assets.IBlobStorageProvider.OpenRead(System.String)">
+            <summary>
+            Open blob for reading
+            </summary>
+            <param name="blobUrl">Relative or absolute blob URL (tmp/blob.txt) </param>
+            <returns></returns>
+        </member>
+        <member name="M:VirtoCommerce.AssetsModule.Core.Assets.IBlobStorageProvider.OpenReadAsync(System.String)">
+            <summary>
+            Open blob for reading
+            </summary>
+            <param name="blobUrl">Relative or absolute blob URL (tmp/blob.txt) </param>
+            <returns></returns>
+        </member>
+        <member name="M:VirtoCommerce.AssetsModule.Core.Assets.IBlobStorageProvider.OpenWrite(System.String)">
+            <summary>
+            Open blob for writing
+            </summary>
+            <param name="blobUrl">Relative or absolute blob URL (tmp/blob.txt)</param>
+            <returns></returns>
+        </member>
+        <member name="M:VirtoCommerce.AssetsModule.Core.Assets.IBlobStorageProvider.OpenWriteAsync(System.String)">
+            <summary>
+            Open blob for writing
+            </summary>
+            <param name="blobUrl">Relative or absolute blob URL (tmp/blob.txt)</param>
+            <returns></returns>
+        </member>
+        <member name="M:VirtoCommerce.AssetsModule.Core.Assets.IBlobStorageProvider.RemoveAsync(System.String[])">
+            <summary>
+            Remove specified blobs
+            </summary>
+            <param name="urls"></param>
+        </member>
+        <member name="M:VirtoCommerce.AssetsModule.Core.Assets.IBlobStorageProvider.Move(System.String,System.String)">
+            <summary>
+            Move specified blob with srcUrl  to destUrl
+            </summary>
+            <param name="srcUrl"></param>
+            <param name="destUrl"></param>
+        </member>
+        <member name="M:VirtoCommerce.AssetsModule.Core.Assets.IBlobStorageProvider.MoveAsyncPublic(System.String,System.String)">
+            <summary>
+            Move specified blob with srcUrl  to destUrl
+            </summary>
+            <param name="srcUrl"></param>
+            <param name="destUrl"></param>
+        </member>
+        <member name="M:VirtoCommerce.AssetsModule.Core.Assets.IBlobStorageProvider.Copy(System.String,System.String)">
+            <summary>
+            Copy specified blob with srcUrl to destUrl
+            </summary>
+            <param name="srcUrl"></param>
+            <param name="destUrl"></param>
+        </member>
+        <member name="M:VirtoCommerce.AssetsModule.Core.Assets.IBlobStorageProvider.CopyAsync(System.String,System.String)">
+            <summary>
+            Copy specified blob with srcUrl to destUrl
+            </summary>
+            <param name="srcUrl"></param>
+            <param name="destUrl"></param>
+        </member>
+        <member name="T:VirtoCommerce.AssetsModule.Core.Swagger.UploadFileAttribute">
+            <summary> 
+            Use this attribute for controllers methods to allow file upload via Swagger 
+            </summary>
+        </member>
+        <member name="P:VirtoCommerce.AssetsModule.Core.Swagger.UploadFileAttribute.Name">
+            <summary>
+            The parameter name in the resulting swagger doc 
+            </summary>
+        </member>
+        <member name="P:VirtoCommerce.AssetsModule.Core.Swagger.UploadFileAttribute.Description">
+            <summary>
+            The parameter description in the resulting swagger doc 
+            </summary>
+        </member>
+        <member name="P:VirtoCommerce.AssetsModule.Core.Swagger.UploadFileAttribute.Type">
+            <summary>
+            Parameter type (only string value supported)
+            Accordingly to: // https://swagger.io/docs/specification/describing-request-body/file-upload/
+            </summary>
+        </member>
+        <member name="P:VirtoCommerce.AssetsModule.Core.Swagger.UploadFileAttribute.Required">
+            <summary>
+            Set true for required parameter
+            </summary>
+        </member>
+    </members>
+</doc>

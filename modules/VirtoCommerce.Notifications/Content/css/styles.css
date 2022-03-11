@@ -1,0 +1,11 @@
+.notification-templates-table .list-name {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.notification-templates-table .list-descr {
+    display: block;
+    font-size: 12px;
+    margin-top: 5px;
+    white-space: initial;
+}

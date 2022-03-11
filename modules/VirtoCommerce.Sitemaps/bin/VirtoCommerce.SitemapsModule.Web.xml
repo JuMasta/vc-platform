@@ -1,0 +1,207 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>VirtoCommerce.SitemapsModule.Web</name>
+    </assembly>
+    <members>
+        <member name="T:VirtoCommerce.SitemapsModule.Web.Controllers.Api.SitemapsModuleApiController">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:VirtoCommerce.SitemapsModule.Web.Controllers.Api.SitemapsModuleApiController.#ctor(VirtoCommerce.SitemapsModule.Core.Services.ISitemapService,VirtoCommerce.SitemapsModule.Core.Services.ISitemapItemService,VirtoCommerce.SitemapsModule.Core.Services.ISitemapSearchService,VirtoCommerce.SitemapsModule.Core.Services.ISitemapItemSearchService,VirtoCommerce.SitemapsModule.Data.Services.ISitemapXmlGenerator,VirtoCommerce.Platform.Core.Security.IUserNameResolver,VirtoCommerce.Platform.Core.PushNotifications.IPushNotificationManager,VirtoCommerce.AssetsModule.Core.Assets.IBlobStorageProvider,VirtoCommerce.AssetsModule.Core.Assets.IBlobUrlResolver,Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Microsoft.Extensions.Options.IOptions{VirtoCommerce.Platform.Core.PlatformOptions})">
+             <summary>
+            
+             </summary>
+             <param name="sitemapService"></param>
+             <param name="sitemapItemService"></param>
+             <param name="sitemapSearchService"></param>
+             <param name="sitemapItemSearchService"></param>
+             <param name="sitemapXmlGenerator"></param>
+             <param name="userNameResolver"></param>
+             <param name="notifier"></param>
+             <param name="blobStorageProvider"></param>
+             <param name="blobUrlResolver"></param>
+             <param name="hostingEnvironment"></param>
+             <param name="platformOptions"></param>
+        </member>
+        <member name="M:VirtoCommerce.SitemapsModule.Web.Controllers.Api.SitemapsModuleApiController.SearchSitemaps(VirtoCommerce.SitemapsModule.Core.Models.Search.SitemapSearchCriteria)">
+             <summary>
+            
+             </summary>
+             <param name="request"></param>
+             <returns></returns>
+        </member>
+        <member name="M:VirtoCommerce.SitemapsModule.Web.Controllers.Api.SitemapsModuleApiController.GetSitemapById(System.String)">
+             <summary>
+            
+             </summary>
+             <param name="id"></param>
+             <returns></returns>
+        </member>
+        <member name="M:VirtoCommerce.SitemapsModule.Web.Controllers.Api.SitemapsModuleApiController.AddSitemap(VirtoCommerce.SitemapsModule.Core.Models.Sitemap)">
+             <summary>
+            
+             </summary>
+             <param name="sitemap"></param>
+             <returns></returns>
+        </member>
+        <member name="M:VirtoCommerce.SitemapsModule.Web.Controllers.Api.SitemapsModuleApiController.UpdateSitemap(VirtoCommerce.SitemapsModule.Core.Models.Sitemap)">
+             <summary>
+            
+             </summary>
+             <param name="sitemap"></param>
+             <returns></returns>
+        </member>
+        <member name="M:VirtoCommerce.SitemapsModule.Web.Controllers.Api.SitemapsModuleApiController.DeleteSitemap(System.String[])">
+             <summary>
+            
+             </summary>
+             <param name="ids"></param>
+             <returns></returns>
+        </member>
+        <member name="M:VirtoCommerce.SitemapsModule.Web.Controllers.Api.SitemapsModuleApiController.SearchSitemapItems(VirtoCommerce.SitemapsModule.Core.Models.Search.SitemapItemSearchCriteria)">
+             <summary>
+            
+             </summary>
+             <param name="request"></param>
+             <returns></returns>
+        </member>
+        <member name="M:VirtoCommerce.SitemapsModule.Web.Controllers.Api.SitemapsModuleApiController.AddSitemapItems(System.String,VirtoCommerce.SitemapsModule.Core.Models.SitemapItem[])">
+             <summary>
+            
+             </summary>
+             <param name="sitemapId"></param>
+             <param name="items"></param>
+             <returns></returns>
+        </member>
+        <member name="M:VirtoCommerce.SitemapsModule.Web.Controllers.Api.SitemapsModuleApiController.RemoveSitemapItems(System.String[])">
+             <summary>
+            
+             </summary>
+             <param name="itemIds"></param>
+             <returns></returns>
+        </member>
+        <member name="M:VirtoCommerce.SitemapsModule.Web.Controllers.Api.SitemapsModuleApiController.GetSitemapsSchema(System.String)">
+             <summary>
+            
+             </summary>
+             <param name="storeId"></param>
+             <returns></returns>
+        </member>
+        <member name="M:VirtoCommerce.SitemapsModule.Web.Controllers.Api.SitemapsModuleApiController.GenerateSitemap(System.String,System.String,System.String)">
+             <summary>
+            
+             </summary>
+             <param name="storeId"></param>
+             <param name="baseUrl"></param>
+             <param name="sitemapUrl"></param>
+             <returns></returns>
+        </member>
+        <member name="M:VirtoCommerce.SitemapsModule.Web.Controllers.Api.SitemapsModuleApiController.DownloadSitemap(System.String,System.String)">
+             <summary>
+            
+             </summary>
+             <param name="storeId"></param>
+             <param name="baseUrl"></param>
+             <returns></returns>
+        </member>
+        <member name="M:VirtoCommerce.SitemapsModule.Web.Controllers.Api.SitemapsModuleApiController.BackgroundDownload(System.String,System.String,VirtoCommerce.SitemapsModule.Web.Model.PushNotifications.SitemapDownloadNotification)">
+             <summary>
+            
+             </summary>
+             <param name="storeId"></param>
+             <param name="baseUrl"></param>
+             <param name="notification"></param>
+             <returns></returns>
+        </member>
+        <member name="T:VirtoCommerce.SitemapsModule.Web.Model.PushNotifications.SitemapDownloadNotification">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:VirtoCommerce.SitemapsModule.Web.Model.PushNotifications.SitemapDownloadNotification.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="creator"></param>
+        </member>
+        <member name="P:VirtoCommerce.SitemapsModule.Web.Model.PushNotifications.SitemapDownloadNotification.Finished">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:VirtoCommerce.SitemapsModule.Web.Model.PushNotifications.SitemapDownloadNotification.TotalCount">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:VirtoCommerce.SitemapsModule.Web.Model.PushNotifications.SitemapDownloadNotification.ProcessedCount">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:VirtoCommerce.SitemapsModule.Web.Model.PushNotifications.SitemapDownloadNotification.ErrorCount">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:VirtoCommerce.SitemapsModule.Web.Model.PushNotifications.SitemapDownloadNotification.Errors">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:VirtoCommerce.SitemapsModule.Web.Model.PushNotifications.SitemapDownloadNotification.DownloadUrl">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:VirtoCommerce.SitemapsModule.Web.Module">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:VirtoCommerce.SitemapsModule.Web.Module.ModuleInfo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:VirtoCommerce.SitemapsModule.Web.Module.Initialize(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            
+            </summary>
+            <param name="serviceCollection"></param>
+        </member>
+        <member name="M:VirtoCommerce.SitemapsModule.Web.Module.PostInitialize(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="appBuilder"></param>
+        </member>
+        <member name="M:VirtoCommerce.SitemapsModule.Web.Module.Uninstall">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:VirtoCommerce.SitemapsModule.Web.Module.ExportAsync(System.IO.Stream,VirtoCommerce.Platform.Core.ExportImport.ExportImportOptions,System.Action{VirtoCommerce.Platform.Core.ExportImport.ExportImportProgressInfo},VirtoCommerce.Platform.Core.Common.ICancellationToken)">
+            <summary>
+            
+            </summary>
+            <param name="outStream"></param>
+            <param name="options"></param>
+            <param name="progressCallback"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VirtoCommerce.SitemapsModule.Web.Module.ImportAsync(System.IO.Stream,VirtoCommerce.Platform.Core.ExportImport.ExportImportOptions,System.Action{VirtoCommerce.Platform.Core.ExportImport.ExportImportProgressInfo},VirtoCommerce.Platform.Core.Common.ICancellationToken)">
+            <summary>
+            
+            </summary>
+            <param name="inputStream"></param>
+            <param name="options"></param>
+            <param name="progressCallback"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
